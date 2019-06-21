@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create Audio Record View Controller-->
+        <scene sceneID="o1r-qx-RFD">
+            <objects>
+                <viewController restorationIdentifier="CreateAudioRecordViewController" storyboardIdentifier="CreateAudioRecordViewController" modalPresentationStyle="overFullScreen" id="hfK-as-cX8" customClass="CreateAudioRecordViewController" customModule="AudioRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NWQ-oN-iSQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUp-G2-DNZ">
+                                <rect key="frame" x="185" y="788" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="XzE-Ii-Ucf"/>
+                                    <constraint firstAttribute="width" constant="44" id="cWg-au-RIe"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="micro"/>
+                                <state key="selected" title="*recording">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilg-t7-x4L">
+                                <rect key="frame" x="165.5" y="667" width="83" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o13-6p-C6d">
+                                <rect key="frame" x="349" y="74" width="45" height="33"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Close"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Lzb-ZI-LPY" firstAttribute="trailing" secondItem="o13-6p-C6d" secondAttribute="trailing" constant="20" id="4Mi-Yh-dod"/>
+                            <constraint firstItem="cUp-G2-DNZ" firstAttribute="centerX" secondItem="NWQ-oN-iSQ" secondAttribute="centerX" id="DZX-QS-Dg6"/>
+                            <constraint firstItem="cUp-G2-DNZ" firstAttribute="top" secondItem="ilg-t7-x4L" secondAttribute="bottom" constant="85" id="MRO-Wq-TGI"/>
+                            <constraint firstItem="Lzb-ZI-LPY" firstAttribute="bottom" secondItem="cUp-G2-DNZ" secondAttribute="bottom" constant="30" id="SRW-qd-dfx"/>
+                            <constraint firstItem="o13-6p-C6d" firstAttribute="top" secondItem="Lzb-ZI-LPY" secondAttribute="top" constant="30" id="iU3-PY-nGk"/>
+                            <constraint firstItem="ilg-t7-x4L" firstAttribute="centerX" secondItem="NWQ-oN-iSQ" secondAttribute="centerX" id="vu3-K4-3KR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lzb-ZI-LPY"/>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="o13-6p-C6d" id="taY-31-vnP"/>
+                        <outlet property="recordButton" destination="cUp-G2-DNZ" id="2fv-5f-4Xx"/>
+                        <outlet property="timeLabel" destination="ilg-t7-x4L" id="oiI-74-llx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1DC-he-PjS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="228.98550724637684" y="128.57142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="micro" width="30" height="30"/>
+    </resources>
+</document>
