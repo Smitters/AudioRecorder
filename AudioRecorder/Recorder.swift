@@ -32,7 +32,7 @@ class Recorder: NSObject {
 
         DispatchQueue.global(qos: .userInitiated).async {
             do {
-                try self.recordingSession.setCategory(AVAudioSession.Category.playAndRecord)
+                try self.recordingSession.setCategory(.playAndRecord)
                 try self.recordingSession.setActive(true, options: .notifyOthersOnDeactivation)
                 self.audioRecorder = try AVAudioRecorder(url: self.recordFileURL, settings: self.settings)
                 self.audioRecorder?.prepareToRecord()

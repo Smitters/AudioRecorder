@@ -27,6 +27,8 @@ class RecordPlayer: NSObject {
         backgroundQueue.async {
             do {
                 let url = Directories.recordsDirectory.appendingPathComponent(fileName)
+                try AVAudioSession.sharedInstance().setActive(true)
+
                 self.audioPlayer = try AVAudioPlayer(contentsOf: url)
                 self.audioPlayer?.delegate = self
 
@@ -70,6 +72,8 @@ extension RecordPlayer: AVAudioPlayerDelegate {
 
     private func cleanup() {
         backgroundQueue.async {
+            try? AVAudioSession.sharedInstance().setActive(false)
+            
             self.isPlaying.accept(false)
             self.playerProgress.accept(0)
 
