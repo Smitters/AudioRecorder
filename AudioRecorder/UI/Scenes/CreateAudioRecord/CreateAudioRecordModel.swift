@@ -61,22 +61,22 @@ class CreateAudioRecordModel {
         formatter.timeStyle = .medium
         let fileNamePrefix = formatter.string(from: currentDate)
 
-        var observables = [Observable<AudioRecord>]()
+        var observables = [Single<AudioRecord>]()
 
         for (index, range) in timeRanges.enumerated() {
             let fileName = "\(fileNamePrefix) part\(index + 1)"
             observables.append(trimAssetAndSave(splitter: splitter, range: range, fileName: fileName))
         }
 
-        return Observable.merge(observables).do(onError: { [weak self] _ in
+        return Observable.from(observables).merge(maxConcurrent: 3).do(onError: { [weak self] _ in
             self?.persistence.saveChanges()
         }, onCompleted: { [weak self] in
             self?.persistence.saveChanges()
         })
     }
 
-    private func trimAssetAndSave(splitter: AssetTrimmer, range: CMTimeRange, fileName: String) -> Observable<AudioRecord> {
-        return Observable.create({ [weak self] (observer) -> Disposable in
+    private func trimAssetAndSave(splitter: AssetTrimmer, range: CMTimeRange, fileName: String) -> Single<AudioRecord> {
+        return Single.create(subscribe: { [weak self] (single) -> Disposable in
             splitter.trimAsset(with: range, outputFileName: fileName) { [weak self] result in
                 guard let self = self else { return }
 
@@ -84,10 +84,9 @@ class CreateAudioRecordModel {
                 case .success(let url):
                     let duration: Double = CMTimeGetSeconds(AVAsset(url: url).duration)
                     let record = AudioRecord(name: fileName, fileUrl: url, duration: duration, insertIntoManagedObjectContext: self.persistence.viewContext)
-                    observer.onNext(record)
-                    observer.onCompleted()
+                    single(.success(record))
                 case .failed(let error):
-                    observer.onError(error)
+                    single(.error(error))
                 }
             }
 
