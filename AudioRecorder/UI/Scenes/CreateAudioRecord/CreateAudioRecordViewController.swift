@@ -36,7 +36,7 @@ class CreateAudioRecordViewController: UIViewController {
 
         viewModel.recordDuration.asDriver(onErrorJustReturn: "0.00").drive(timeLabel.rx.text).disposed(by: disposeBag)
 
-        recordButton.rx.tap.bind { [weak viewModel] in
+        recordButton.rx.tap.throttle(.seconds(1), scheduler: MainScheduler.instance).bind { [weak viewModel] in
             viewModel?.toggleRecord()
         }.disposed(by: disposeBag)
 

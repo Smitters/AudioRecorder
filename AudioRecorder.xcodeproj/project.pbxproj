@@ -22,7 +22,7 @@
 		1066DB1E22BBF45100CB0FA2 /* CreateAudioRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1066DB1D22BBF45100CB0FA2 /* CreateAudioRecordViewModel.swift */; };
 		1066DB2122BBF5A500CB0FA2 /* CreateAudioRecord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1066DB2022BBF5A500CB0FA2 /* CreateAudioRecord.storyboard */; };
 		1066DB2322BC019800CB0FA2 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1066DB2222BC019800CB0FA2 /* Storyboards.swift */; };
-		1066DB2522BC11E400CB0FA2 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1066DB2422BC11E400CB0FA2 /* AudioRecorder.swift */; };
+		10E19B6F22BDB27A000117BD /* AssetTrimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E19B6E22BDB27A000117BD /* AssetTrimmer.swift */; };
 		10EB3D0322BCE1150082092A /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB3D0222BCE1150082092A /* Recorder.swift */; };
 		DB2F5CCDE3F0A8503D911646 /* Pods_AudioRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E887BC17D1800EA7D80FB066 /* Pods_AudioRecorder.framework */; };
 /* End PBXBuildFile section */
@@ -46,7 +46,7 @@
 		1066DB1D22BBF45100CB0FA2 /* CreateAudioRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAudioRecordViewModel.swift; sourceTree = "<group>"; };
 		1066DB2022BBF5A500CB0FA2 /* CreateAudioRecord.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateAudioRecord.storyboard; sourceTree = "<group>"; };
 		1066DB2222BC019800CB0FA2 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
-		1066DB2422BC11E400CB0FA2 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		10E19B6E22BDB27A000117BD /* AssetTrimmer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetTrimmer.swift; sourceTree = "<group>"; };
 		10EB3D0222BCE1150082092A /* Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 		73400DCAE2E506EDC01D8088 /* Pods-AudioRecorder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioRecorder.debug.xcconfig"; path = "Target Support Files/Pods-AudioRecorder/Pods-AudioRecorder.debug.xcconfig"; sourceTree = "<group>"; };
 		E887BC17D1800EA7D80FB066 /* Pods_AudioRecorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudioRecorder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,13 +87,13 @@
 			children = (
 				1066DAF322BBC45F00CB0FA2 /* AppDelegate.swift */,
 				1066DB1622BBD68000CB0FA2 /* Coordinator.swift */,
+				10E19B6E22BDB27A000117BD /* AssetTrimmer.swift */,
 				10EB3D0222BCE1150082092A /* Recorder.swift */,
 				1066DB0A22BBCA2600CB0FA2 /* Persistence */,
 				1066DB1522BBD66500CB0FA2 /* UI */,
 				1066DAFF22BBC46000CB0FA2 /* LaunchScreen.storyboard */,
 				1066DB0222BBC46000CB0FA2 /* Info.plist */,
 				1066DAFD22BBC46000CB0FA2 /* Assets.xcassets */,
-				1066DB2422BC11E400CB0FA2 /* AudioRecorder.swift */,
 			);
 			path = AudioRecorder;
 			sourceTree = "<group>";
@@ -295,8 +295,8 @@
 				1066DB0C22BBD1BC00CB0FA2 /* RecordsListViewController.swift in Sources */,
 				1066DB1422BBD4D000CB0FA2 /* RecordsListViewModel.swift in Sources */,
 				1066DB0922BBC52D00CB0FA2 /* Persistence.swift in Sources */,
+				10E19B6F22BDB27A000117BD /* AssetTrimmer.swift in Sources */,
 				1066DB1222BBD48800CB0FA2 /* RecordsListModel.swift in Sources */,
-				1066DB2522BC11E400CB0FA2 /* AudioRecorder.swift in Sources */,
 				1066DB1922BBF24900CB0FA2 /* CreateAudioRecordViewController.swift in Sources */,
 				1066DAF422BBC45F00CB0FA2 /* AppDelegate.swift in Sources */,
 				1066DB1C22BBF42800CB0FA2 /* CreateAudioRecordModel.swift in Sources */,

@@ -24,7 +24,7 @@ class Recorder: NSObject {
 
     private let maxDuration: TimeInterval = 30
 
-    func startRecording(with completion: @escaping(Result) -> Void, recordDurationProgress: @escaping(TimeInterval) -> Void) {
+    func startRecording(with completion: @escaping (Result) -> Void, recordDurationProgress: @escaping (TimeInterval) -> Void) {
         self.completion = completion
         self.recordDurationProgress = recordDurationProgress
 
@@ -33,27 +33,29 @@ class Recorder: NSObject {
             return
         }
 
-        recordFileURL = url
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.recordFileURL = url
 
-        do {
-            try recordingSession.setCategory(AVAudioSession.Category.playAndRecord)
-            try recordingSession.setActive(true, options: .notifyOthersOnDeactivation)
-            audioRecorder = try AVAudioRecorder(url: url, settings: settings)
-            audioRecorder?.prepareToRecord()
-            audioRecorder?.delegate = self
-        } catch {
-            completion(.failure(error))
-            return
-        }
+            do {
+                try self.recordingSession.setCategory(AVAudioSession.Category.playAndRecord)
+                try self.recordingSession.setActive(true, options: .notifyOthersOnDeactivation)
+                self.audioRecorder = try AVAudioRecorder(url: url, settings: self.settings)
+                self.audioRecorder?.prepareToRecord()
+                self.audioRecorder?.delegate = self
+            } catch {
+                completion(.failure(error))
+                return
+            }
 
-        recordingSession.requestRecordPermission { [weak self] granted in
-            guard let self = self else { return }
+            self.recordingSession.requestRecordPermission { [weak self] granted in
+                guard let self = self else { return }
 
-            if granted {
-                self.audioRecorder?.record(forDuration: 30)
-                self.scheduleTimer()
-            } else {
-                self.completion?(.failure(Error.permissionDenied))
+                if granted {
+                    self.audioRecorder?.record(forDuration: 30)
+                    self.scheduleTimer()
+                } else {
+                    self.completion?(.failure(Error.permissionDenied))
+                }
             }
         }
     }
@@ -63,11 +65,13 @@ class Recorder: NSObject {
     }
 
     private func scheduleTimer() {
-        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { [weak self] _ in
-            guard let self = self, var duration = self.audioRecorder?.currentTime else { return }
-            duration = duration > self.maxDuration ? self.maxDuration : duration
-            self.recordDurationProgress?(duration)
-        })
+        DispatchQueue.main.async {
+            self.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { [weak self] _ in
+                guard let self = self, var duration = self.audioRecorder?.currentTime else { return }
+                duration = duration > self.maxDuration ? self.maxDuration : duration
+                self.recordDurationProgress?(duration)
+            })
+        }
     }
 }
 

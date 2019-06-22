@@ -26,6 +26,13 @@ class CreateAudioRecordViewModel {
         self.cordinator = cordinator
 
         model.recordDuration.map(timeString).bind(to: recordDuration).disposed(by: disposeBag)
+        model.recordResult.subscribe(onNext: { url in
+            print("saved url \(url)")
+        }, onError: { (error) in
+            print(error)
+        }, onCompleted: {
+            print("completed")
+        }).disposed(by: disposeBag)
     }
 
     func toggleRecord() {
