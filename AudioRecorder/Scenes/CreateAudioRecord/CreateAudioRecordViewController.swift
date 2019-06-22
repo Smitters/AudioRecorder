@@ -14,6 +14,7 @@ class CreateAudioRecordViewController: UIViewController {
     @IBOutlet private weak var timeLabel: UILabel!
     @IBOutlet private weak var recordButton: UIButton!
     @IBOutlet private weak var cancelButton: UIBarButtonItem!
+    @IBOutlet private weak var navigationBar: UINavigationBar!
 
     private let disposeBag = DisposeBag()
 
@@ -28,6 +29,7 @@ class CreateAudioRecordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupUI()
         setupBindings()
     }
 
@@ -40,8 +42,18 @@ class CreateAudioRecordViewController: UIViewController {
             viewModel?.toggleRecord()
         }.disposed(by: disposeBag)
 
-        cancelButton.rx.tap.bind { [weak self] in
-            self?.dismiss(animated: true, completion: nil)
+        cancelButton.rx.tap.bind { [weak viewModel] in
+            viewModel?.cancel()
         }.disposed(by: disposeBag)
+    }
+
+    private func setupUI() {
+        navigationBar.delegate = self
+    }
+}
+
+extension CreateAudioRecordViewController: UINavigationBarDelegate {
+    func position(for bar: UIBarPositioning) -> UIBarPosition {
+        return .topAttached
     }
 }

@@ -38,6 +38,8 @@ class CreateAudioRecordModel {
             case .failure(let error):
                 self.isRecording.accept(false)
                 self.recordResult.onError(error)
+            case .canceled:
+                self.isRecording.accept(false)
             }
         }, recordDurationProgress: { [weak self] timeInterval in
             self?.recordDuration.onNext(timeInterval)
@@ -46,6 +48,10 @@ class CreateAudioRecordModel {
 
     func stopRecording() {
         recorder.stopRecording()
+    }
+
+    func cancelRecording() {
+        recorder.cancel()
     }
 
     // MARK: - Splitting
@@ -57,14 +63,13 @@ class CreateAudioRecordModel {
 
         let currentDate = Date()
         let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .medium
+        formatter.dateFormat = "YYYY-MM-DD hh:mm:ss"
         let fileNamePrefix = formatter.string(from: currentDate)
 
         var observables = [Single<AudioRecord>]()
 
         for (index, range) in timeRanges.enumerated() {
-            let fileName = "\(fileNamePrefix) part\(index + 1)"
+            let fileName = "\(fileNamePrefix) part \(index + 1)"
             observables.append(trimAssetAndSave(splitter: splitter, range: range, fileName: fileName))
         }
 

@@ -20,3 +20,11 @@ class AudioRecord: NSManagedObject {
         self.duration = duration
     }
 }
+
+extension AudioRecord {
+    static var fetchRequest: NSFetchRequest<AudioRecord> {
+        let request = NSFetchRequest<AudioRecord>(entityName: "AudioRecord")
+        request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: false)]
+        return request
+    }
+}

@@ -36,5 +36,9 @@ class RecordsListViewController: UITableViewController {
         addButton.rx.tap.bind { [weak viewModel] in
             viewModel?.addNewRecord()
         }.disposed(by: disposeBag)
+
+//        viewModel.records.bind(to: tableView.rx.items(cellIdentifier: "qwer")) { (row, element, cell) in
+//
+//        }.disposed(by: disposeBag)
     }
 }

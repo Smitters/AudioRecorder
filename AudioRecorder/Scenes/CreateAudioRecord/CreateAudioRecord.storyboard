@@ -48,10 +48,10 @@
                         <constraints>
                             <constraint firstItem="fcI-bF-5Oz" firstAttribute="leading" secondItem="Lzb-ZI-LPY" secondAttribute="leading" id="8jM-00-Eyl"/>
                             <constraint firstItem="cUp-G2-DNZ" firstAttribute="centerX" secondItem="NWQ-oN-iSQ" secondAttribute="centerX" id="DZX-QS-Dg6"/>
-                            <constraint firstItem="fcI-bF-5Oz" firstAttribute="top" secondItem="Lzb-ZI-LPY" secondAttribute="top" id="JN2-bi-LLV"/>
                             <constraint firstItem="Lzb-ZI-LPY" firstAttribute="trailing" secondItem="ilg-t7-x4L" secondAttribute="trailing" constant="40" id="KkM-4L-8tK"/>
                             <constraint firstItem="cUp-G2-DNZ" firstAttribute="top" secondItem="ilg-t7-x4L" secondAttribute="bottom" constant="85" id="MRO-Wq-TGI"/>
                             <constraint firstItem="Lzb-ZI-LPY" firstAttribute="bottom" secondItem="cUp-G2-DNZ" secondAttribute="bottom" constant="30" id="SRW-qd-dfx"/>
+                            <constraint firstItem="fcI-bF-5Oz" firstAttribute="top" secondItem="Lzb-ZI-LPY" secondAttribute="top" id="VI1-z2-41z"/>
                             <constraint firstItem="fcI-bF-5Oz" firstAttribute="trailing" secondItem="Lzb-ZI-LPY" secondAttribute="trailing" id="eDh-V6-RMM"/>
                             <constraint firstItem="ilg-t7-x4L" firstAttribute="leading" secondItem="Lzb-ZI-LPY" secondAttribute="leading" constant="40" id="hFO-gv-Wkz"/>
                             <constraint firstItem="ilg-t7-x4L" firstAttribute="centerX" secondItem="NWQ-oN-iSQ" secondAttribute="centerX" id="vu3-K4-3KR"/>
@@ -60,6 +60,7 @@
                     </view>
                     <connections>
                         <outlet property="cancelButton" destination="w5C-td-pXD" id="RSz-Le-I7f"/>
+                        <outlet property="navigationBar" destination="fcI-bF-5Oz" id="kw6-qd-PzP"/>
                         <outlet property="recordButton" destination="cUp-G2-DNZ" id="2fv-5f-4Xx"/>
                         <outlet property="timeLabel" destination="ilg-t7-x4L" id="oiI-74-llx"/>
                     </connections>

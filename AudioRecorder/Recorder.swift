@@ -23,10 +23,12 @@ class Recorder: NSObject {
                             AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue]
 
     private let maxDuration: TimeInterval = 30
+    private var isCanceled = false
 
     func startRecording(with completion: @escaping (Result) -> Void, recordDurationProgress: @escaping (TimeInterval) -> Void) {
         self.completion = completion
         self.recordDurationProgress = recordDurationProgress
+        isCanceled = false
 
         guard let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("fullRecord.m4a") else {
             completion(.failure(Error.documentsDirectoryNotFound))
@@ -64,11 +66,19 @@ class Recorder: NSObject {
         audioRecorder?.stop()
     }
 
+    func cancel() {
+        if audioRecorder?.isRecording == true {
+            isCanceled = true
+            audioRecorder?.stop()
+            audioRecorder?.deleteRecording()
+        }
+    }
+
     private func scheduleTimer() {
         DispatchQueue.main.async {
             let fps: TimeInterval = 60
-            let uodateInterval = TimeInterval(1) / fps
-            self.timer = Timer.scheduledTimer(withTimeInterval: uodateInterval, repeats: true, block: { [weak self] _ in
+            let updateInterval = TimeInterval(1) / fps
+            self.timer = Timer.scheduledTimer(withTimeInterval: updateInterval, repeats: true, block: { [weak self] _ in
                 guard let self = self, var duration = self.audioRecorder?.currentTime else { return }
                 duration = duration > self.maxDuration ? self.maxDuration : duration
                 self.recordDurationProgress?(duration)
@@ -80,6 +90,11 @@ class Recorder: NSObject {
 extension Recorder: AVAudioRecorderDelegate {
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         handleFinish()
+        guard !isCanceled else {
+            completion?(.canceled)
+            return
+        }
+
         if let url = recordFileURL, flag {
             completion?(.success(url))
         } else {
@@ -108,6 +123,7 @@ extension Recorder {
     enum Result {
         case success(URL)
         case failure(Swift.Error)
+        case canceled
     }
 
     enum Error: LocalizedError {

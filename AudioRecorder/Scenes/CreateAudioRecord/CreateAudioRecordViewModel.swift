@@ -14,24 +14,25 @@ private let defaultDurationValue = "00.00"
 
 class CreateAudioRecordViewModel {
     private let model: CreateAudioRecordModel
-    private let cordinator: CoordinatorType
+    private let coordinator: CoordinatorType
 
     let recordDuration = BehaviorSubject<String>(value: defaultDurationValue)
-    let isSaving = BehaviorSubject(value: false)
 
     let disposeBag = DisposeBag()
 
-    init(model: CreateAudioRecordModel, cordinator: CoordinatorType) {
+    init(model: CreateAudioRecordModel, coordinator: CoordinatorType) {
         self.model = model
-        self.cordinator = cordinator
+        self.coordinator = coordinator
 
         model.recordDuration.map(timeString).bind(to: recordDuration).disposed(by: disposeBag)
-        model.recordResult.subscribe(onNext: { url in
-            print("saved url \(url)")
+        model.recordResult.observeOn(MainScheduler.instance).subscribe(onNext: { record in
+            debugPrint("saved record \(record)")
         }, onError: { (error) in
-            print(error)
-        }, onCompleted: {
-            print("completed")
+            self.coordinator.showError(error, completion: { [weak self] in
+                self?.coordinator.dismiss()
+            })
+        }, onCompleted: { [weak self] in
+            self?.coordinator.dismiss()
         }).disposed(by: disposeBag)
     }
 
@@ -41,6 +42,11 @@ class CreateAudioRecordViewModel {
         } else {
             model.startRecording()
         }
+    }
+
+    func cancel() {
+        model.cancelRecording()
+        coordinator.dismiss()
     }
 
     private func timeString(_ time: TimeInterval) -> String {

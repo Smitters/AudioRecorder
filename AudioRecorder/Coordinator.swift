@@ -12,6 +12,8 @@ protocol CoordinatorType {
     func start()
     func handleAppTerminate()
     func openAddNewRecordController()
+    func dismiss()
+    func showError(_ error: Error, completion: (() -> Void)?)
 }
 
 class Coordinator: CoordinatorType {
@@ -20,6 +22,14 @@ class Coordinator: CoordinatorType {
 
     private let window: UIWindow?
     private let navigationController: UINavigationController?
+
+    private var topViewController: UIViewController? {
+        if let presented = navigationController?.presentedViewController {
+            return presented
+        } else {
+            return navigationController?.topViewController
+        }
+    }
 
     init(window: UIWindow?) {
         self.window = window
@@ -42,10 +52,23 @@ class Coordinator: CoordinatorType {
     func openAddNewRecordController() {
         let addNewViewController = Storyboards.CreateAudioRecorder.createAudioRecordViewController()
         let model = try! CreateAudioRecordModel(persistence: persistence)
-        let viewModel = CreateAudioRecordViewModel(model: model, cordinator: self)
+        let viewModel = CreateAudioRecordViewModel(model: model, coordinator: self)
         addNewViewController.viewModel = viewModel
 
-        let sender = navigationController?.topViewController
-        sender?.present(addNewViewController, animated: true)
+        topViewController?.present(addNewViewController, animated: true)
+    }
+
+    func dismiss() {
+        navigationController?.topViewController?.dismiss(animated: true)
+    }
+
+    func showError(_ error: Error, completion: (() -> Void)?) {
+        let alertController = UIAlertController(title: "Ooops, error occured", message: error.localizedDescription, preferredStyle: .alert)
+
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+            completion?()
+        }))
+
+        topViewController?.present(alertController, animated: true)
     }
 }
