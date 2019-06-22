@@ -70,7 +70,7 @@ class CreateAudioRecordModel {
 
         for (index, range) in timeRanges.enumerated() {
             let fileName = "\(fileNamePrefix) (part-\(index + 1))"
-            observables.append(trimAssetAndSave(splitter: splitter, range: range, fileName: fileName))
+            observables.append(trimAssetAndSave(splitter: splitter, range: range, name: fileName))
         }
 
         return Observable.from(observables).merge(maxConcurrent: 3).do(onError: { [weak self] _ in
@@ -80,16 +80,17 @@ class CreateAudioRecordModel {
         })
     }
 
-    private func trimAssetAndSave(splitter: AssetTrimmer, range: CMTimeRange, fileName: String) -> Single<AudioRecord> {
+    private func trimAssetAndSave(splitter: AssetTrimmer, range: CMTimeRange, name: String) -> Single<AudioRecord> {
         return Single.create(subscribe: { [weak self] (single) -> Disposable in
-            splitter.trimAsset(with: range, outputFileName: fileName) { [weak self] result in
+            splitter.trimAsset(with: range, outputFileName: name) { [weak self] result in
                 guard let self = self else { return }
 
                 switch result {
-                case .success(let url):
+                case .success(let fileName):
+                    let url = Directories.recordsDirectory.appendingPathComponent(fileName)
                     let duration: Double = CMTimeGetSeconds(AVAsset(url: url).duration)
                     DispatchQueue.main.async {
-                        let record = AudioRecord(name: fileName, fileUrl: url, duration: duration, insertIntoManagedObjectContext: self.persistence.viewContext)
+                        let record = AudioRecord(name: name, fileName: fileName, duration: duration, insertIntoManagedObjectContext: self.persistence.viewContext)
                         single(.success(record))
                     }
                 case .failed(let error):

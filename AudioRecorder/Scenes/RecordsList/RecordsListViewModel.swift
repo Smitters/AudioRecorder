@@ -38,8 +38,8 @@ class RecordsListViewModel {
             recordPlayer.stop()
         } else {
             lastPlayedRow = row
-            let url = records.value[row].fileUrl
-            recordPlayer.play(url: url)
+            let fileName = records.value[row].fileName
+            recordPlayer.play(fileName: fileName)
         }
     }
 }

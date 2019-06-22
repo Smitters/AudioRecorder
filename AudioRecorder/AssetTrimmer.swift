@@ -31,22 +31,19 @@ class AssetTrimmer {
     }
 
     func trimAsset(with timeRange: CMTimeRange, outputFileName: String, completion: @escaping (Result) -> Void) {
-        let recordsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-                                                  .appendingPathComponent("records", isDirectory: true)
-
         guard let exporter = AVAssetExportSession(asset: originalAsset, presetName: AVAssetExportPresetAppleM4A) else {
             completion(.failed(Error.failedToInstantiateExporter))
             return
         }
 
         do {
-            try FileManager.default.createDirectory(at: recordsDirectory, withIntermediateDirectories: true)
+            try FileManager.default.createDirectory(at: Directories.recordsDirectory, withIntermediateDirectories: true)
         } catch {
             completion(.failed(Error.exportFailed(error)))
         }
 
         let safeName = safeFileName(from: outputFileName)
-        let outputURL = recordsDirectory.appendingPathComponent(safeName).appendingPathExtension("m4a")
+        let outputURL = Directories.recordsDirectory.appendingPathComponent(safeName).appendingPathExtension("m4a")
 
         exporter.outputURL = outputURL
         exporter.outputFileType = AVFileType.m4a
@@ -59,7 +56,7 @@ class AssetTrimmer {
             case .cancelled:
                 completion(.failed(Error.canceled))
             case .completed:
-                completion(.success(outputURL))
+                completion(.success(safeName + ".m4a"))
             default:
                 break
             }
@@ -76,13 +73,8 @@ class AssetTrimmer {
 }
 
 extension AssetTrimmer {
-
-    /// Result of the trimming
-    ///
-    /// - success with URL of the trimmed asset
-    /// - failed with error
     enum Result {
-        case success(URL)
+        case success(String)
         case failed(Error)
     }
 

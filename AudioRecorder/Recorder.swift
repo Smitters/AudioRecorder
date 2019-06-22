@@ -11,7 +11,7 @@ import AVFoundation
 class Recorder: NSObject {
     private lazy var recordingSession = AVAudioSession.sharedInstance()
 
-    private var recordFileURL: URL?
+    private let recordFileURL = Directories.documentsDirectory.appendingPathComponent("fullRecord.m4a")
     private var audioRecorder: AVAudioRecorder?
     private var displayLink: CADisplayLink?
     private var completion: ((Result) -> Void)?
@@ -30,18 +30,11 @@ class Recorder: NSObject {
         self.recordDurationProgress = recordDurationProgress
         isCanceled = false
 
-        guard let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("fullRecord.m4a") else {
-            completion(.failure(Error.documentsDirectoryNotFound))
-            return
-        }
-
         DispatchQueue.global(qos: .userInitiated).async {
-            self.recordFileURL = url
-
             do {
                 try self.recordingSession.setCategory(AVAudioSession.Category.playAndRecord)
                 try self.recordingSession.setActive(true, options: .notifyOthersOnDeactivation)
-                self.audioRecorder = try AVAudioRecorder(url: url, settings: self.settings)
+                self.audioRecorder = try AVAudioRecorder(url: self.recordFileURL, settings: self.settings)
                 self.audioRecorder?.prepareToRecord()
                 self.audioRecorder?.delegate = self
             } catch {
@@ -90,8 +83,8 @@ extension Recorder: AVAudioRecorderDelegate {
             return
         }
 
-        if let url = recordFileURL, flag {
-            completion?(.success(url))
+        if flag {
+            completion?(.success(recordFileURL))
         } else {
             completion?(.failure(Error.failedToEncodeAudio))
         }
@@ -122,7 +115,6 @@ extension Recorder {
     }
 
     enum Error: LocalizedError {
-        case documentsDirectoryNotFound
         case failedToEncodeAudio
         case permissionDenied
     }

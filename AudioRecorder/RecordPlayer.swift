@@ -18,14 +18,15 @@ class RecordPlayer: NSObject {
     let playerProgress = BehaviorRelay<Float>(value: 0)
     let backgroundQueue = DispatchQueue(label: "play_sound_queue", qos: .userInitiated)
 
-    func play(url: URL) {
+    func play(fileName: String) {
         if self.audioPlayer != nil {
             self.audioPlayer?.stop()
             self.cleanup()
         }
-        
+
         backgroundQueue.async {
             do {
+                let url = Directories.recordsDirectory.appendingPathComponent(fileName)
                 self.audioPlayer = try AVAudioPlayer(contentsOf: url)
                 self.audioPlayer?.delegate = self
 
@@ -47,14 +48,14 @@ class RecordPlayer: NSObject {
     }
 
     private func scheduleTimer() {
-        DispatchQueue.main.async {
-            self.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { [weak self] _ in
-                guard let player = self?.audioPlayer else { return }
+        timer = Timer(timeInterval: 0.1, repeats: true, block: { [weak self] _ in
+            guard let player = self?.audioPlayer else { return }
 
-                let progress = player.currentTime / player.duration
-                self?.playerProgress.accept(Float(progress))
-            })
-        }
+            let progress = player.currentTime / player.duration
+            self?.playerProgress.accept(Float(progress))
+        })
+
+        RunLoop.main.add(timer!, forMode: .common)
     }
 }
 

@@ -10,13 +10,13 @@ import CoreData
 
 class AudioRecord: NSManagedObject {
     @NSManaged var name: String
-    @NSManaged var fileUrl: URL
+    @NSManaged var fileName: String
     @NSManaged var duration: Double
 
-    convenience init(name: String, fileUrl: URL, duration: Double, insertIntoManagedObjectContext context: NSManagedObjectContext) {
+    convenience init(name: String, fileName: String, duration: Double, insertIntoManagedObjectContext context: NSManagedObjectContext) {
         self.init(context: context)
         self.name = name
-        self.fileUrl = fileUrl
+        self.fileName = fileName
         self.duration = duration
     }
 }
