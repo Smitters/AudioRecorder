@@ -42,4 +42,17 @@ class RecordsListViewModel {
             recordPlayer.play(fileName: fileName)
         }
     }
+
+    func deleteItem(at row: Int) {
+        if row == lastPlayedRow && isPlayed.value == true {
+            recordPlayer.stop()
+            lastPlayedRow = nil
+        }
+
+        model.deleteItem(at: row)
+
+        if let lastPlayedRow = lastPlayedRow, row < lastPlayedRow {
+            self.lastPlayedRow = lastPlayedRow - 1
+        }
+    }
 }

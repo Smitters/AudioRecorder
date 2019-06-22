@@ -46,16 +46,20 @@ class RecordsListViewController: UIViewController {
                 cell.recordNameLabel.text = element.name
                 cell.durationLabel.text = "\(Int(element.duration.rounded(.up))) sec"
 
-                cell.playTapped = { [weak self] in
-                    self?.viewModel?.playItem(at: row)
-                }
-
                 if row == viewModel.lastPlayedRow && viewModel.isPlayed.value {
                     cell.playButton.setImage(UIImage(imageLiteralResourceName: "stop"), for: .normal)
                     cell.progressView.progress = viewModel.playedItemProgress.value
                 } else {
                     cell.playButton.setImage(UIImage(imageLiteralResourceName: "play"), for: .normal)
                     cell.progressView.progress = 0
+                }
+
+                cell.playTapped = { [weak self] in
+                    self?.viewModel?.playItem(at: row)
+                }
+
+                cell.deleteTapped = { [weak self] in
+                    self?.viewModel?.deleteItem(at: row)
                 }
             }
         }.disposed(by: disposeBag)

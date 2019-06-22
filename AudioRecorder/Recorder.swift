@@ -48,7 +48,7 @@ class Recorder: NSObject {
                 if granted {
                     self.audioRecorder?.record(forDuration: 30)
                     self.displayLink = CADisplayLink(target: self, selector: #selector(self.udateDuration))
-                    self.displayLink?.add(to: .main, forMode: .default)
+                    self.displayLink?.add(to: .main, forMode: .common)
                 } else {
                     self.completion?(.failure(Error.permissionDenied))
                 }

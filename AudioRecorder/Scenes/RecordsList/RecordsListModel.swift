@@ -31,6 +31,12 @@ class RecordsListModel: NSObject {
         try? fetchedResultController.performFetch()
         recordsSubject.accept(fetchedResultController.fetchedObjects ?? [])
     }
+
+    func deleteItem(at index: Int) {
+        let item = fetchedResultController.object(at: IndexPath(row: index, section: 0))
+        persistence.viewContext.delete(item)
+        persistence.saveChanges()
+    }
 }
 
 extension RecordsListModel: NSFetchedResultsControllerDelegate {
