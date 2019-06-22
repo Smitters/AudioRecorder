@@ -13,7 +13,7 @@ class Recorder: NSObject {
 
     private var recordFileURL: URL?
     private var audioRecorder: AVAudioRecorder?
-    private var timer: Timer?
+    private var displayLink: CADisplayLink?
     private var completion: ((Result) -> Void)?
     private var recordDurationProgress: ((TimeInterval) -> Void)?
 
@@ -54,7 +54,8 @@ class Recorder: NSObject {
 
                 if granted {
                     self.audioRecorder?.record(forDuration: 30)
-                    self.scheduleTimer()
+                    self.displayLink = CADisplayLink(target: self, selector: #selector(self.udateDuration))
+                    self.displayLink?.add(to: .main, forMode: .default)
                 } else {
                     self.completion?(.failure(Error.permissionDenied))
                 }
@@ -74,16 +75,10 @@ class Recorder: NSObject {
         }
     }
 
-    private func scheduleTimer() {
-        DispatchQueue.main.async {
-            let fps: TimeInterval = 60
-            let updateInterval = TimeInterval(1) / fps
-            self.timer = Timer.scheduledTimer(withTimeInterval: updateInterval, repeats: true, block: { [weak self] _ in
-                guard let self = self, var duration = self.audioRecorder?.currentTime else { return }
-                duration = duration > self.maxDuration ? self.maxDuration : duration
-                self.recordDurationProgress?(duration)
-            })
-        }
+    @objc private func udateDuration() {
+        guard var duration = audioRecorder?.currentTime else { return }
+        duration = duration > maxDuration ? maxDuration : duration
+        recordDurationProgress?(duration)
     }
 }
 
@@ -113,8 +108,8 @@ extension Recorder: AVAudioRecorderDelegate {
 
     private func handleFinish() {
         try? recordingSession.setActive(false, options: .notifyOthersOnDeactivation)
-        timer?.invalidate()
-        timer = nil
+        displayLink?.invalidate()
+        displayLink = nil
         audioRecorder = nil
     }
 }

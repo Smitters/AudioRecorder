@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController restorationIdentifier="CreateAudioRecordViewController" storyboardIdentifier="CreateAudioRecordViewController" modalPresentationStyle="overFullScreen" id="hfK-as-cX8" customClass="CreateAudioRecordViewController" customModule="AudioRecorder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NWQ-oN-iSQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUp-G2-DNZ">
-                                <rect key="frame" x="177" y="772" width="60" height="60"/>
+                                <rect key="frame" x="130" y="428" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="XzE-Ii-Ucf"/>
                                     <constraint firstAttribute="width" constant="60" id="cWg-au-RIe"/>
@@ -31,13 +31,13 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="36" translatesAutoresizingMaskIntoConstraints="NO" id="ilg-t7-x4L">
-                                <rect key="frame" x="40" y="599" width="334" height="88"/>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="72"/>
+                                <rect key="frame" x="40" y="144" width="240" height="122"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="100"/>
                                 <color key="textColor" red="0.050980392159999999" green="0.51372549020000002" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fcI-bF-5Oz">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Create new record" largeTitleDisplayMode="always" id="nRI-oK-l4y">
                                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="cancel" id="w5C-td-pXD">
@@ -49,11 +49,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ilg-t7-x4L" firstAttribute="top" secondItem="fcI-bF-5Oz" secondAttribute="bottom" constant="80" id="2NU-xe-oHI"/>
                             <constraint firstItem="fcI-bF-5Oz" firstAttribute="leading" secondItem="Lzb-ZI-LPY" secondAttribute="leading" id="8jM-00-Eyl"/>
                             <constraint firstItem="cUp-G2-DNZ" firstAttribute="centerX" secondItem="NWQ-oN-iSQ" secondAttribute="centerX" id="DZX-QS-Dg6"/>
                             <constraint firstItem="Lzb-ZI-LPY" firstAttribute="trailing" secondItem="ilg-t7-x4L" secondAttribute="trailing" constant="40" id="KkM-4L-8tK"/>
-                            <constraint firstItem="cUp-G2-DNZ" firstAttribute="top" secondItem="ilg-t7-x4L" secondAttribute="bottom" constant="85" id="MRO-Wq-TGI"/>
-                            <constraint firstItem="Lzb-ZI-LPY" firstAttribute="bottom" secondItem="cUp-G2-DNZ" secondAttribute="bottom" constant="30" id="SRW-qd-dfx"/>
+                            <constraint firstItem="Lzb-ZI-LPY" firstAttribute="bottom" secondItem="cUp-G2-DNZ" secondAttribute="bottom" constant="80" id="SRW-qd-dfx"/>
                             <constraint firstItem="fcI-bF-5Oz" firstAttribute="top" secondItem="Lzb-ZI-LPY" secondAttribute="top" id="VI1-z2-41z"/>
                             <constraint firstItem="fcI-bF-5Oz" firstAttribute="trailing" secondItem="Lzb-ZI-LPY" secondAttribute="trailing" id="eDh-V6-RMM"/>
                             <constraint firstItem="ilg-t7-x4L" firstAttribute="leading" secondItem="Lzb-ZI-LPY" secondAttribute="leading" constant="40" id="hFO-gv-Wkz"/>

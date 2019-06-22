@@ -38,14 +38,42 @@ class RecordsListViewController: UIViewController {
             viewModel?.addNewRecord()
         }.disposed(by: disposeBag)
 
-        viewModel.records.bind(to: tableView.rx.items(cellIdentifier: String(describing: RecordsTableViewCell.self))) { (row, element, cell) in
+        viewModel.records.bind(to: tableView.rx.items(cellIdentifier: String(describing: RecordsTableViewCell.self))) { [weak self] (row, element, cell) in
+
+            guard let self = self, let viewModel = self.viewModel else { return }
 
             if let cell = cell as? RecordsTableViewCell {
                 cell.recordNameLabel.text = element.name
                 cell.durationLabel.text = "\(Int(element.duration.rounded(.up))) sec"
-                cell.progressView.progress = 0
+
+                cell.playTapped = { [weak self] in
+                    self?.viewModel?.playItem(at: row)
+                }
+
+                if row == viewModel.lastPlayedRow && viewModel.isPlayed.value {
+                    cell.playButton.setImage(UIImage(imageLiteralResourceName: "stop"), for: .normal)
+                    cell.progressView.progress = viewModel.playedItemProgress.value
+                } else {
+                    cell.playButton.setImage(UIImage(imageLiteralResourceName: "play"), for: .normal)
+                    cell.progressView.progress = 0
+                }
+            }
+        }.disposed(by: disposeBag)
+
+        viewModel.isPlayed.asDriver().drive(onNext: { [weak self] isPlayed in
+            self?.tableView.reloadData()
+        }).disposed(by: disposeBag)
+
+        viewModel.playedItemProgress.asDriver().drive(onNext: { [weak self] progress in
+            debugPrint("playedItemProgress Triggered - \(progress)")
+
+            guard let self = self,
+                let row = self.viewModel?.lastPlayedRow,
+                let cell = self.tableView.cellForRow(at: IndexPath(row: row, section: 0)) as? RecordsTableViewCell else {
+                    return
             }
 
-        }.disposed(by: disposeBag)
+            cell.progressView.progress = viewModel.playedItemProgress.value
+        }).disposed(by: disposeBag)
     }
 }

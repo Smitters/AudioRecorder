@@ -7,13 +7,16 @@
 //
 
 import RxSwift
+import RxRelay
 import CoreData
 
 class RecordsListModel: NSObject {
 
     private let persistence: Persistence
     private let fetchedResultController: NSFetchedResultsController<AudioRecord>
-    let recordsSubject = BehaviorSubject<[AudioRecord]>(value: [])
+    private let recordPLayer = RecordPlayer()
+
+    let recordsSubject = BehaviorRelay<[AudioRecord]>(value: [])
 
     init(persistence: Persistence) {
         self.persistence = persistence
@@ -25,12 +28,8 @@ class RecordsListModel: NSObject {
 
         super.init()
         fetchedResultController.delegate = self
-        do {
-            try fetchedResultController.performFetch()
-            recordsSubject.onNext(fetchedResultController.fetchedObjects ?? [])
-        } catch {
-            recordsSubject.onError(error)
-        }
+        try? fetchedResultController.performFetch()
+        recordsSubject.accept(fetchedResultController.fetchedObjects ?? [])
     }
 }
 
@@ -40,7 +39,7 @@ extension RecordsListModel: NSFetchedResultsControllerDelegate {
                     atSectionIndex sectionIndex: Int,
                     for type: NSFetchedResultsChangeType) {
 
-        recordsSubject.onNext(fetchedResultController.fetchedObjects ?? [])
+        recordsSubject.accept(fetchedResultController.fetchedObjects ?? [])
     }
 
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>,
@@ -49,6 +48,6 @@ extension RecordsListModel: NSFetchedResultsControllerDelegate {
                     for type: NSFetchedResultsChangeType,
                     newIndexPath: IndexPath?) {
 
-        recordsSubject.onNext(fetchedResultController.fetchedObjects ?? [])
+        recordsSubject.accept(fetchedResultController.fetchedObjects ?? [])
     }
 }
