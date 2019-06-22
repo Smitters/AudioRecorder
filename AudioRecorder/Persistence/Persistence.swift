@@ -8,13 +8,13 @@
 
 import CoreData
 
-protocol PersistenceType {
-    func saveChanges()
-}
-
-class Persistence: PersistenceType {
+class Persistence {
 
     private let persistentContainer: NSPersistentContainer
+
+    var viewContext: NSManagedObjectContext {
+        return persistentContainer.viewContext
+    }
 
     init() {
         self.persistentContainer = NSPersistentContainer(name: "AudioRecorder")

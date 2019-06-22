@@ -10,9 +10,9 @@ import Foundation
 
 class RecordsListModel {
 
-    private let persistence: PersistenceType
+    private let persistence: Persistence
 
-    init(persistence: PersistenceType) {
+    init(persistence: Persistence) {
         self.persistence = persistence
     }
 }

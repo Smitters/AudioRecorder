@@ -12,15 +12,15 @@ import AVFoundation
 
 class CreateAudioRecordModel {
 
-    private let persistence: PersistenceType
+    private let persistence: Persistence
     private lazy var recorder = Recorder()
     private let disposeBag = DisposeBag()
 
-    let recordResult = PublishSubject<URL>()
+    let recordResult = PublishSubject<AudioRecord>()
     let recordDuration = BehaviorSubject<TimeInterval>(value: 0)
     let isRecording = BehaviorRelay(value: false)
 
-    init(persistence: PersistenceType) throws {
+    init(persistence: Persistence) throws {
         self.persistence = persistence
     }
 
@@ -50,7 +50,7 @@ class CreateAudioRecordModel {
 
     // MARK: - Splitting
 
-    func splitAndSaveAudio(url: URL) -> Observable<URL> {
+    func splitAndSaveAudio(url: URL) -> Observable<AudioRecord> {
 
         let splitter = AssetTrimmer(fullRecord: url)
         let timeRanges = splitter.timeRanges(splitCount: 3)
@@ -61,22 +61,30 @@ class CreateAudioRecordModel {
         formatter.timeStyle = .medium
         let fileNamePrefix = formatter.string(from: currentDate)
 
-        var observables = [Observable<URL>]()
+        var observables = [Observable<AudioRecord>]()
 
         for (index, range) in timeRanges.enumerated() {
             let fileName = "\(fileNamePrefix) part\(index + 1)"
             observables.append(trimAssetAndSave(splitter: splitter, range: range, fileName: fileName))
         }
 
-        return Observable.merge(observables)
+        return Observable.merge(observables).do(onError: { [weak self] _ in
+            self?.persistence.saveChanges()
+        }, onCompleted: { [weak self] in
+            self?.persistence.saveChanges()
+        })
     }
 
-    private func trimAssetAndSave(splitter: AssetTrimmer, range: CMTimeRange, fileName: String) -> Observable<URL> {
-        return Observable.create({ (observer) -> Disposable in
-            splitter.trimAsset(with: range, outputFileName: fileName) { result in
+    private func trimAssetAndSave(splitter: AssetTrimmer, range: CMTimeRange, fileName: String) -> Observable<AudioRecord> {
+        return Observable.create({ [weak self] (observer) -> Disposable in
+            splitter.trimAsset(with: range, outputFileName: fileName) { [weak self] result in
+                guard let self = self else { return }
+
                 switch result {
                 case .success(let url):
-                    observer.onNext(url)
+                    let duration: Double = CMTimeGetSeconds(AVAsset(url: url).duration)
+                    let record = AudioRecord(name: fileName, fileUrl: url, duration: duration, insertIntoManagedObjectContext: self.persistence.viewContext)
+                    observer.onNext(record)
                     observer.onCompleted()
                 case .failed(let error):
                     observer.onError(error)

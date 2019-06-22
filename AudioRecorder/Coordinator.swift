@@ -16,7 +16,7 @@ protocol CoordinatorType {
 
 class Coordinator: CoordinatorType {
 
-    private lazy var persistence: PersistenceType = Persistence()
+    private lazy var persistence: Persistence = Persistence()
 
     private let window: UIWindow?
     private let navigationController: UINavigationController?

@@ -66,7 +66,9 @@ class Recorder: NSObject {
 
     private func scheduleTimer() {
         DispatchQueue.main.async {
-            self.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { [weak self] _ in
+            let fps: TimeInterval = 60
+            let uodateInterval = TimeInterval(1) / fps
+            self.timer = Timer.scheduledTimer(withTimeInterval: uodateInterval, repeats: true, block: { [weak self] _ in
                 guard let self = self, var duration = self.audioRecorder?.currentTime else { return }
                 duration = duration > self.maxDuration ? self.maxDuration : duration
                 self.recordDurationProgress?(duration)

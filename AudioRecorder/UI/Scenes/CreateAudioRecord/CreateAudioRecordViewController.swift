@@ -13,7 +13,7 @@ class CreateAudioRecordViewController: UIViewController {
 
     @IBOutlet private weak var timeLabel: UILabel!
     @IBOutlet private weak var recordButton: UIButton!
-    @IBOutlet private weak var closeButton: UIButton!
+    @IBOutlet private weak var cancelButton: UIBarButtonItem!
 
     private let disposeBag = DisposeBag()
 
@@ -34,13 +34,13 @@ class CreateAudioRecordViewController: UIViewController {
     private func setupBindings() {
         guard let viewModel = viewModel else { return }
 
-        viewModel.recordDuration.asDriver(onErrorJustReturn: "0.00").drive(timeLabel.rx.text).disposed(by: disposeBag)
+        viewModel.recordDuration.asDriver(onErrorJustReturn: "00.00").drive(timeLabel.rx.text).disposed(by: disposeBag)
 
         recordButton.rx.tap.throttle(.seconds(1), scheduler: MainScheduler.instance).bind { [weak viewModel] in
             viewModel?.toggleRecord()
         }.disposed(by: disposeBag)
 
-        closeButton.rx.tap.bind { [weak self] in
+        cancelButton.rx.tap.bind { [weak self] in
             self?.dismiss(animated: true, completion: nil)
         }.disposed(by: disposeBag)
     }

@@ -77,9 +77,9 @@ class AssetTrimmer {
 
 extension AssetTrimmer {
 
-    /// Result of the exporting
+    /// Result of the trimming
     ///
-    /// - success with URL of the exported asset
+    /// - success with URL of the trimmed asset
     /// - failed with error
     enum Result {
         case success(URL)
