@@ -17,7 +17,7 @@ class CreateAudioRecordModel {
     private let disposeBag = DisposeBag()
 
     let recordResult = PublishSubject<AudioRecord>()
-    let recordDuration = BehaviorSubject<TimeInterval>(value: 0)
+    let recordDuration = BehaviorRelay<TimeInterval>(value: 0)
     let isRecording = BehaviorRelay(value: false)
 
     init(persistence: Persistence) throws {
@@ -42,7 +42,7 @@ class CreateAudioRecordModel {
                 self.isRecording.accept(false)
             }
         }, recordDurationProgress: { [weak self] timeInterval in
-            self?.recordDuration.onNext(timeInterval)
+            self?.recordDuration.accept(timeInterval)
         })
     }
 
@@ -63,13 +63,13 @@ class CreateAudioRecordModel {
 
         let currentDate = Date()
         let formatter = DateFormatter()
-        formatter.dateFormat = "YYYY-MM-DD hh:mm:ss"
+        formatter.dateFormat = "yyyy-MM-dd | HH:mm:ss"
         let fileNamePrefix = formatter.string(from: currentDate)
 
         var observables = [Single<AudioRecord>]()
 
         for (index, range) in timeRanges.enumerated() {
-            let fileName = "\(fileNamePrefix) part \(index + 1)"
+            let fileName = "\(fileNamePrefix) (part-\(index + 1))"
             observables.append(trimAssetAndSave(splitter: splitter, range: range, fileName: fileName))
         }
 
@@ -88,8 +88,10 @@ class CreateAudioRecordModel {
                 switch result {
                 case .success(let url):
                     let duration: Double = CMTimeGetSeconds(AVAsset(url: url).duration)
-                    let record = AudioRecord(name: fileName, fileUrl: url, duration: duration, insertIntoManagedObjectContext: self.persistence.viewContext)
-                    single(.success(record))
+                    DispatchQueue.main.async {
+                        let record = AudioRecord(name: fileName, fileUrl: url, duration: duration, insertIntoManagedObjectContext: self.persistence.viewContext)
+                        single(.success(record))
+                    }
                 case .failed(let error):
                     single(.error(error))
                 }

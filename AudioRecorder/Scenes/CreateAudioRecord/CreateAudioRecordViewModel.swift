@@ -16,19 +16,21 @@ class CreateAudioRecordViewModel {
     private let model: CreateAudioRecordModel
     private let coordinator: CoordinatorType
 
-    let recordDuration = BehaviorSubject<String>(value: defaultDurationValue)
+    let recordDuration = BehaviorRelay<String>(value: defaultDurationValue)
+    let isRecording: BehaviorRelay<Bool>
 
     let disposeBag = DisposeBag()
 
     init(model: CreateAudioRecordModel, coordinator: CoordinatorType) {
         self.model = model
         self.coordinator = coordinator
+        self.isRecording = model.isRecording
 
         model.recordDuration.map(timeString).bind(to: recordDuration).disposed(by: disposeBag)
         model.recordResult.observeOn(MainScheduler.instance).subscribe(onNext: { record in
             debugPrint("saved record \(record)")
-        }, onError: { (error) in
-            self.coordinator.showError(error, completion: { [weak self] in
+        }, onError: { [weak self] (error) in
+            self?.coordinator.showError(error, completion: { [weak self] in
                 self?.coordinator.dismiss()
             })
         }, onCompleted: { [weak self] in

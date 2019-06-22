@@ -27,6 +27,7 @@ class RecordsListModel: NSObject {
         fetchedResultController.delegate = self
         do {
             try fetchedResultController.performFetch()
+            recordsSubject.onNext(fetchedResultController.fetchedObjects ?? [])
         } catch {
             recordsSubject.onError(error)
         }

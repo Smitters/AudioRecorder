@@ -17,29 +17,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUp-G2-DNZ">
-                                <rect key="frame" x="185" y="788" width="44" height="44"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUp-G2-DNZ">
+                                <rect key="frame" x="177" y="772" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="XzE-Ii-Ucf"/>
-                                    <constraint firstAttribute="width" constant="44" id="cWg-au-RIe"/>
+                                    <constraint firstAttribute="height" constant="60" id="XzE-Ii-Ucf"/>
+                                    <constraint firstAttribute="width" constant="60" id="cWg-au-RIe"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="micro"/>
+                                <state key="normal" image="mic"/>
                                 <state key="selected" title="*recording">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="36" translatesAutoresizingMaskIntoConstraints="NO" id="ilg-t7-x4L">
-                                <rect key="frame" x="40" y="615" width="334" height="88"/>
+                                <rect key="frame" x="40" y="599" width="334" height="88"/>
                                 <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="72"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.050980392159999999" green="0.51372549020000002" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fcI-bF-5Oz">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Create new record" largeTitleDisplayMode="always" id="nRI-oK-l4y">
-                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="cancel" id="w5C-td-pXD"/>
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="cancel" id="w5C-td-pXD">
+                                            <color key="tintColor" red="0.050980392156862744" green="0.51372549019607838" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -71,6 +74,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="micro" width="30" height="30"/>
+        <image name="mic" width="48" height="48"/>
     </resources>
 </document>

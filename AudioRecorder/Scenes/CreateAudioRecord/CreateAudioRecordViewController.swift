@@ -45,10 +45,26 @@ class CreateAudioRecordViewController: UIViewController {
         cancelButton.rx.tap.bind { [weak viewModel] in
             viewModel?.cancel()
         }.disposed(by: disposeBag)
+
+        viewModel.isRecording.asDriver().drive(onNext: { [weak self] isRecording in
+            guard let self = self else { return }
+            UIView.transition(with: self.recordButton, duration: 0.3, options: .transitionFlipFromTop, animations: {
+                if isRecording {
+                    self.recordButton.setImage(UIImage(imageLiteralResourceName: "stop"), for: .normal)
+                    self.recordButton.tintColor = .red
+                } else {
+                    self.recordButton.setImage(UIImage(imageLiteralResourceName: "mic"), for: .normal)
+                    self.recordButton.tintColor = .black
+                }
+            })
+        }).disposed(by: disposeBag)
     }
 
     private func setupUI() {
         navigationBar.delegate = self
+        recordButton.layer.cornerRadius = recordButton.bounds.height / 2
+        recordButton.layer.borderWidth = 2
+        recordButton.layer.borderColor = UIColor.black.cgColor
     }
 }
 

@@ -10,8 +10,10 @@ import UIKit
 
 class RecordsTableViewCell: UITableViewCell {
 
-    func configure(with record: RecordsListViewModel.Record) {
-        
-    }
+    @IBOutlet weak var recordNameLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var progressView: UIProgressView!
 
 }
