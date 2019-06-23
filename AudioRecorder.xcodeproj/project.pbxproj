@@ -78,6 +78,7 @@
 		10C08EE422BFC40E0044ACBB /* sample.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sample.gif; sourceTree = "<group>"; };
 		10C08EE522BFCECD0044ACBB /* RecordPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordPlayerTests.swift; sourceTree = "<group>"; };
 		10C08EE922BFDF400044ACBB /* codecov.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = codecov.yml; sourceTree = "<group>"; };
+		10C08EEB22BFE4420044ACBB /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		10E19B6E22BDB27A000117BD /* AssetTrimmer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetTrimmer.swift; sourceTree = "<group>"; };
 		10E19B7022BDF68D000117BD /* AudioRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecord.swift; sourceTree = "<group>"; };
 		10E19B7522BE191D000117BD /* RecordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsTableViewCell.swift; sourceTree = "<group>"; };
@@ -124,6 +125,7 @@
 				2E1F02B67E475FFF886E94A0 /* Pods */,
 				18E8ACDE346478AFB151CF56 /* Frameworks */,
 				10C08EE222BFA7930044ACBB /* README.md */,
+				10C08EEB22BFE4420044ACBB /* .travis.yml */,
 				10C08EE422BFC40E0044ACBB /* sample.gif */,
 				10C08EE922BFDF400044ACBB /* codecov.yml */,
 			);
