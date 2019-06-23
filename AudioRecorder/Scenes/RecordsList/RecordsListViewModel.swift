@@ -62,4 +62,8 @@ class RecordsListViewModel {
             self.currentlyPlayedRow = playedRow - 1
         }
     }
+
+    func item(at row: Int) -> AudioRecord {
+        return records.value[row]
+    }
 }

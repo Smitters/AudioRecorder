@@ -41,7 +41,7 @@ class RecordsListViewController: UIViewController {
 
             if let cell = cell as? RecordsTableViewCell {
                 cell.recordNameLabel.text = element.name
-                cell.durationLabel.text = "\(Int(element.duration.rounded(.up))) sec"
+                cell.durationLabel.text = "\(element.duration.timeString) sec"
 
                 if row == viewModel.currentlyPlayedRow && viewModel.isPlaying.value {
                     cell.playButton.setImage(UIImage(imageLiteralResourceName: "stop"), for: .normal)
@@ -71,6 +71,9 @@ class RecordsListViewController: UIViewController {
                     return
             }
 
+            let element = viewModel.item(at: row)
+            let remainingDuration = element.duration * TimeInterval(1 - progress)
+            cell.durationLabel.text = "\(remainingDuration.timeString) sec"
             cell.progressView.progress = viewModel.playedItemProgress.value
         }).disposed(by: disposeBag)
 
