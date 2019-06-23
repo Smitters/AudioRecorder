@@ -87,8 +87,7 @@ class CreateAudioRecordModel {
 
                 switch result {
                 case .success(let fileName):
-                    let url = Directories.recordsDirectory.appendingPathComponent(fileName)
-                    let duration: Double = CMTimeGetSeconds(AVAsset(url: url).duration)
+                    let duration: Double = CMTimeGetSeconds(range.duration)
                     DispatchQueue.main.async {
                         let record = AudioRecord(name: name, fileName: fileName, duration: duration, insertIntoManagedObjectContext: self.persistence.viewContext)
                         single(.success(record))
