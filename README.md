@@ -1,6 +1,6 @@
 # AudioRecorder
 
-[![Build Status](https://travis-ci.org/Smitters/AudioRecorder?branch=master)](https://travis-ci.org/Smitters/AudioRecorder)
+[![Build Status](https://api.travis-ci.org/Smitters/AudioRecorder.svg?branch=master)](https://travis-ci.org/Smitters/AudioRecorder)
 [![codecov](https://codecov.io/gh/Smitters/AudioRecorder/branch/master/graph/badge.svg)](https://codecov.io/gh/Smitters/AudioRecorder)
 ![Swift 5](https://img.shields.io/badge/Swift-5-orange.svg)
 [![Twitter](https://img.shields.io/badge/contact-@smetankin93-blue.svg?style=flat)](https://twitter.com/smetankin93)
