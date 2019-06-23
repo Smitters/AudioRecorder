@@ -36,11 +36,20 @@ class RecordsListViewModel {
     func playItem(at row: Int) {
         if row == lastPlayedRow && isPlayed.value == true {
             recordPlayer.stop()
+            lastPlayedRow = nil
         } else {
             lastPlayedRow = row
             let fileName = records.value[row].fileName
             recordPlayer.play(fileName: fileName)
         }
+    }
+
+    func selectItem(at row: Int) {
+        recordPlayer.stop()
+        lastPlayedRow = nil
+
+        let fileName = records.value[row].fileName
+        cordinator.showDetails(for: fileName)
     }
 
     func deleteItem(at row: Int) {

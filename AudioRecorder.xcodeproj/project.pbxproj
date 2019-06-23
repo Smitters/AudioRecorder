@@ -27,6 +27,10 @@
 		10E19B7622BE191D000117BD /* RecordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E19B7522BE191D000117BD /* RecordsTableViewCell.swift */; };
 		10E19B7822BE66D0000117BD /* RecordPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E19B7722BE66D0000117BD /* RecordPlayer.swift */; };
 		10E19B7A22BE9D63000117BD /* Directories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E19B7922BE9D63000117BD /* Directories.swift */; };
+		10E19B7D22BEB06A000117BD /* RecordDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E19B7C22BEB06A000117BD /* RecordDetailsViewController.swift */; };
+		10E19B7F22BEB0B7000117BD /* RecordDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E19B7E22BEB0B7000117BD /* RecordDetailsViewModel.swift */; };
+		10E19B8622BED4D3000117BD /* RecordDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10E19B8522BED4D3000117BD /* RecordDetails.storyboard */; };
+		10E19B8822BEED51000117BD /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E19B8722BEED51000117BD /* WaveView.swift */; };
 		10EB3D0322BCE1150082092A /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB3D0222BCE1150082092A /* Recorder.swift */; };
 		DB2F5CCDE3F0A8503D911646 /* Pods_AudioRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E887BC17D1800EA7D80FB066 /* Pods_AudioRecorder.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +59,10 @@
 		10E19B7522BE191D000117BD /* RecordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsTableViewCell.swift; sourceTree = "<group>"; };
 		10E19B7722BE66D0000117BD /* RecordPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordPlayer.swift; sourceTree = "<group>"; };
 		10E19B7922BE9D63000117BD /* Directories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Directories.swift; sourceTree = "<group>"; };
+		10E19B7C22BEB06A000117BD /* RecordDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailsViewController.swift; sourceTree = "<group>"; };
+		10E19B7E22BEB0B7000117BD /* RecordDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailsViewModel.swift; sourceTree = "<group>"; };
+		10E19B8522BED4D3000117BD /* RecordDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecordDetails.storyboard; sourceTree = "<group>"; };
+		10E19B8722BEED51000117BD /* WaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveView.swift; sourceTree = "<group>"; };
 		10EB3D0222BCE1150082092A /* Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 		73400DCAE2E506EDC01D8088 /* Pods-AudioRecorder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioRecorder.debug.xcconfig"; path = "Target Support Files/Pods-AudioRecorder/Pods-AudioRecorder.debug.xcconfig"; sourceTree = "<group>"; };
 		E887BC17D1800EA7D80FB066 /* Pods_AudioRecorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudioRecorder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,9 +154,21 @@
 			children = (
 				1066DB1A22BBF25400CB0FA2 /* CreateAudioRecord */,
 				1066DB1022BBD46600CB0FA2 /* RecordsList */,
+				10E19B7B22BEB03A000117BD /* RecordDetails */,
 				1066DB2222BC019800CB0FA2 /* Storyboards.swift */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		10E19B7B22BEB03A000117BD /* RecordDetails */ = {
+			isa = PBXGroup;
+			children = (
+				10E19B7C22BEB06A000117BD /* RecordDetailsViewController.swift */,
+				10E19B7E22BEB0B7000117BD /* RecordDetailsViewModel.swift */,
+				10E19B8722BEED51000117BD /* WaveView.swift */,
+				10E19B8522BED4D3000117BD /* RecordDetails.storyboard */,
+			);
+			path = RecordDetails;
 			sourceTree = "<group>";
 		};
 		18E8ACDE346478AFB151CF56 /* Frameworks */ = {
@@ -232,6 +252,7 @@
 				1066DB0F22BBD26A00CB0FA2 /* RecordsList.storyboard in Resources */,
 				1066DB0122BBC46000CB0FA2 /* LaunchScreen.storyboard in Resources */,
 				1066DAFE22BBC46000CB0FA2 /* Assets.xcassets in Resources */,
+				10E19B8622BED4D3000117BD /* RecordDetails.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1066DB1E22BBF45100CB0FA2 /* CreateAudioRecordViewModel.swift in Sources */,
+				10E19B7F22BEB0B7000117BD /* RecordDetailsViewModel.swift in Sources */,
 				1066DB2322BC019800CB0FA2 /* Storyboards.swift in Sources */,
 				10EB3D0322BCE1150082092A /* Recorder.swift in Sources */,
 				1066DB0C22BBD1BC00CB0FA2 /* RecordsListViewController.swift in Sources */,
@@ -303,7 +325,9 @@
 				10E19B6F22BDB27A000117BD /* AssetTrimmer.swift in Sources */,
 				1066DB1222BBD48800CB0FA2 /* RecordsListModel.swift in Sources */,
 				10E19B7A22BE9D63000117BD /* Directories.swift in Sources */,
+				10E19B7D22BEB06A000117BD /* RecordDetailsViewController.swift in Sources */,
 				10E19B7822BE66D0000117BD /* RecordPlayer.swift in Sources */,
+				10E19B8822BEED51000117BD /* WaveView.swift in Sources */,
 				1066DB1922BBF24900CB0FA2 /* CreateAudioRecordViewController.swift in Sources */,
 				10E19B7122BDF68D000117BD /* AudioRecord.swift in Sources */,
 				1066DAF422BBC45F00CB0FA2 /* AppDelegate.swift in Sources */,

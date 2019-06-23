@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Record Details-->
+        <scene sceneID="I3T-c1-FUZ">
+            <objects>
+                <viewController restorationIdentifier="RecordDetailsViewController" storyboardIdentifier="RecordDetailsViewController" id="Dwc-tA-j4z" customClass="RecordDetailsViewController" customModule="AudioRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cUN-9w-Y8L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KX8-zQ-Eqd">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X6x-A3-Gi6" customClass="WaveView" customModule="AudioRecorder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="818"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="400" id="aRz-Mw-EYk"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="X6x-A3-Gi6" secondAttribute="bottom" id="7CV-AG-lvq"/>
+                                    <constraint firstItem="X6x-A3-Gi6" firstAttribute="top" secondItem="KX8-zQ-Eqd" secondAttribute="top" id="SyX-gv-8AP"/>
+                                    <constraint firstItem="X6x-A3-Gi6" firstAttribute="leading" secondItem="KX8-zQ-Eqd" secondAttribute="leading" id="fXT-m8-GKG"/>
+                                    <constraint firstAttribute="trailing" secondItem="X6x-A3-Gi6" secondAttribute="trailing" id="iEz-Pw-cLn"/>
+                                    <constraint firstItem="X6x-A3-Gi6" firstAttribute="centerY" secondItem="KX8-zQ-Eqd" secondAttribute="centerY" id="mEo-il-92U"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aUK-GN-Xyu" firstAttribute="bottom" secondItem="KX8-zQ-Eqd" secondAttribute="bottom" id="BBq-rp-R6P"/>
+                            <constraint firstItem="aUK-GN-Xyu" firstAttribute="trailing" secondItem="KX8-zQ-Eqd" secondAttribute="trailing" id="FCk-bD-srF"/>
+                            <constraint firstItem="KX8-zQ-Eqd" firstAttribute="leading" secondItem="aUK-GN-Xyu" secondAttribute="leading" id="Uh7-qV-veL"/>
+                            <constraint firstItem="KX8-zQ-Eqd" firstAttribute="top" secondItem="aUK-GN-Xyu" secondAttribute="top" id="n4Z-zV-ZOn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aUK-GN-Xyu"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Record Details" id="anf-FE-2ZS"/>
+                    <connections>
+                        <outlet property="waveView" destination="X6x-A3-Gi6" id="bXS-CJ-eNc"/>
+                        <outlet property="widthConstraint" destination="aRz-Mw-EYk" id="mLT-9y-5tr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oFw-8I-Ewd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-46.376811594202906" y="24.776785714285712"/>
+        </scene>
+    </scenes>
+</document>

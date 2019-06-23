@@ -73,6 +73,10 @@ class RecordsListViewController: UIViewController {
             cell.progressView.progress = viewModel.playedItemProgress.value
         }).disposed(by: disposeBag)
 
+        tableView.rx.itemSelected.bind { [weak self] path in
+            self?.viewModel?.selectItem(at: path.row)
+        }.disposed(by: disposeBag)
+
         addButton.rx.tap.bind { [weak viewModel] in
             viewModel?.addNewRecord()
         }.disposed(by: disposeBag)

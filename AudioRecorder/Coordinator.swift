@@ -12,6 +12,7 @@ protocol CoordinatorType {
     func start()
     func handleAppTerminate()
     func openAddNewRecordController()
+    func showDetails(for fileName: String)
     func dismiss()
     func showError(_ error: Error, completion: (() -> Void)?)
 }
@@ -56,6 +57,15 @@ class Coordinator: CoordinatorType {
         addNewViewController.viewModel = viewModel
 
         topViewController?.present(addNewViewController, animated: true)
+    }
+
+    func showDetails(for fileName: String) {
+        let detailsController = Storyboards.RecordDetails.recordDetailsViewController()
+        let viewModel = RecordDetailsViewModel(recordName: fileName)
+
+        detailsController.viewModel = viewModel
+
+        navigationController?.pushViewController(detailsController, animated: true)
     }
 
     func dismiss() {

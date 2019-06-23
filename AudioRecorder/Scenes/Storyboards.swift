@@ -24,6 +24,14 @@ enum Storyboards {
             return createAudioRecordStoryboard.instantiateViewController()
         }
     }
+
+    enum RecordDetails {
+        private static let recordDetailsStoryboard = UIStoryboard(name: "RecordDetails", bundle: Bundle.main)
+
+        static func recordDetailsViewController() -> RecordDetailsViewController {
+            return recordDetailsStoryboard.instantiateViewController()
+        }
+    }
 }
 
 extension UIStoryboard {
