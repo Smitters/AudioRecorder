@@ -3,8 +3,8 @@ use_frameworks!
 inhibit_all_warnings!
 
 def testing_pods
-  pod 'RxSwift', '5.0.0'
-  pod 'RxCocoa', '5.0.0'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 end
 
 target 'AudioRecorder' do

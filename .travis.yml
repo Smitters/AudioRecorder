@@ -1,8 +1,10 @@
 osx_image: xcode10.2  
 language: swift
 
+before_install:
+- pod install --repo-update
+
 script:
-- pod install
 - xcodebuild test -workspace AudioRecorder.xcworkspace -scheme AudioRecorder -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8' | xcpretty -c
 
 after_success:
