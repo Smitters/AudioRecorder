@@ -11,22 +11,22 @@ import RxCocoa
 
 class RecordsListViewModel {
     private let model: RecordsListModel
-    private let cordinator: CoordinatorType
+    private let cordinator: Coordinator
     private let disposeBag = DisposeBag()
     private let recordPlayer = RecordPlayer()
 
     let records: BehaviorRelay<[AudioRecord]>
     let playedItemProgress: BehaviorRelay<Float>
-    let isPlayed: BehaviorRelay<Bool>
+    let isPlaying: BehaviorRelay<Bool>
 
     var lastPlayedRow: Int?
 
-    init(model: RecordsListModel, cordinator: CoordinatorType) {
+    init(model: RecordsListModel, cordinator: Coordinator) {
         self.model = model
         self.cordinator = cordinator
         records = model.recordsSubject
         playedItemProgress = recordPlayer.playerProgress
-        isPlayed = recordPlayer.isPlaying
+        isPlaying = recordPlayer.isPlaying
     }
 
     func addNewRecord() {
@@ -34,7 +34,7 @@ class RecordsListViewModel {
     }
 
     func playItem(at row: Int) {
-        if row == lastPlayedRow && isPlayed.value == true {
+        if row == lastPlayedRow && isPlaying.value == true {
             recordPlayer.stop()
             lastPlayedRow = nil
         } else {
@@ -47,13 +47,11 @@ class RecordsListViewModel {
     func selectItem(at row: Int) {
         recordPlayer.stop()
         lastPlayedRow = nil
-
-        let fileName = records.value[row].fileName
-        cordinator.showDetails(for: fileName)
+        cordinator.showDetails(for: records.value[row])
     }
 
     func deleteItem(at row: Int) {
-        if row == lastPlayedRow && isPlayed.value == true {
+        if row == lastPlayedRow && isPlaying.value == true {
             recordPlayer.stop()
             lastPlayedRow = nil
         }

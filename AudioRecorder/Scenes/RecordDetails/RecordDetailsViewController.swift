@@ -12,8 +12,10 @@ import RxSwift
 
 class RecordDetailsViewController: UIViewController {
 
-    @IBOutlet weak var widthConstraint: NSLayoutConstraint!
     @IBOutlet weak var waveView: WaveView!
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var fileNameLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
 
     let disposeBag = DisposeBag()
 
@@ -38,11 +40,28 @@ class RecordDetailsViewController: UIViewController {
             self?.waveView.wavePoints = points
         }).disposed(by: disposeBag)
 
-        viewModel.waveViewWidth.asDriver().drive(onNext: { [weak self] width in
-            self?.widthConstraint.constant = width
-            self?.view.layoutIfNeeded()
+        viewModel.playerProgress.asDriver().drive(onNext: { [weak self] progress in
+            self?.waveView.progress = progress
         }).disposed(by: disposeBag)
 
+        viewModel.durationText.asDriver(onErrorJustReturn: "00.00 | 00.00").drive(durationLabel.rx.text).disposed(by: disposeBag)
+
+        playButton.rx.tap.throttle(.milliseconds(350), scheduler: MainScheduler.instance).bind { [weak viewModel] in
+            viewModel?.toggleStart()
+        }.disposed(by: disposeBag)
+
+        viewModel.isPlaying.asDriver().drive(onNext: { [weak self] isPlaying in
+            guard let self = self else { return }
+            UIView.transition(with: self.playButton, duration: 0.3, options: .transitionFlipFromBottom, animations: {
+                if isPlaying {
+                    self.playButton.setImage(UIImage(imageLiteralResourceName: "stop"), for: .normal)
+                } else {
+                    self.playButton.setImage(UIImage(imageLiteralResourceName: "play"), for: .normal)
+                }
+            })
+        }).disposed(by: disposeBag)
+
+        fileNameLabel.text = viewModel.name
         viewModel.createWavePoints()
     }
 }

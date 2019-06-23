@@ -42,7 +42,7 @@ class RecordsListViewController: UIViewController {
                 cell.recordNameLabel.text = element.name
                 cell.durationLabel.text = "\(Int(element.duration.rounded(.up))) sec"
 
-                if row == viewModel.lastPlayedRow && viewModel.isPlayed.value {
+                if row == viewModel.lastPlayedRow && viewModel.isPlaying.value {
                     cell.playButton.setImage(UIImage(imageLiteralResourceName: "stop"), for: .normal)
                     cell.progressView.progress = viewModel.playedItemProgress.value
                 } else {
@@ -60,7 +60,7 @@ class RecordsListViewController: UIViewController {
             }
         }.disposed(by: disposeBag)
 
-        viewModel.isPlayed.asDriver().drive(onNext: { [weak self] isPlayed in
+        viewModel.isPlaying.asDriver().drive(onNext: { [weak self] isPlayed in
             self?.tableView.reloadData()
         }).disposed(by: disposeBag)
 

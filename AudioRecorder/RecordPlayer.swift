@@ -50,7 +50,10 @@ class RecordPlayer: NSObject {
     }
 
     private func scheduleTimer() {
-        timer = Timer(timeInterval: 0.1, repeats: true, block: { [weak self] _ in
+        let fps: TimeInterval = 60
+        let updateInterval = 1 / fps
+
+        timer = Timer(timeInterval: updateInterval, repeats: true, block: { [weak self] _ in
             guard let player = self?.audioPlayer else { return }
 
             let progress = player.currentTime / player.duration

@@ -14,12 +14,34 @@ import AVFoundation
 class RecordDetailsViewModel {
 
     private let url: URL
+    private let record: AudioRecord
+    private let recordPlayer = RecordPlayer()
 
-    let waveViewWidth = BehaviorRelay<CGFloat>(value: 0)
     let wavePoints = BehaviorRelay<[CGFloat]>(value: [])
+    let playerProgress: BehaviorRelay<Float>
+    let durationText: Observable<String>
+    let isPlaying: BehaviorRelay<Bool>
+    let name: String
 
-    init(recordName: String) {
-        url = Directories.recordsDirectory.appendingPathComponent(recordName)
+    init(record: AudioRecord) {
+        self.record = record
+        url = Directories.recordsDirectory.appendingPathComponent(record.fileName)
+        playerProgress = recordPlayer.playerProgress
+        isPlaying = recordPlayer.isPlaying
+        name = record.name
+
+        let duration = record.duration
+        durationText = playerProgress.map { (progress) -> String in
+            return String("\(TimeInterval(duration * TimeInterval(progress)).timeString) | \(duration.timeString)")
+        }
+    }
+
+    func toggleStart() {
+        if isPlaying.value {
+            recordPlayer.stop()
+        } else {
+            recordPlayer.play(fileName: record.fileName)
+        }
     }
 
     func createWavePoints() {
@@ -45,14 +67,8 @@ class RecordDetailsViewModel {
         let linesCount = Int(floatValues.count / Int(samplesPerLine))
         var wavePointsData = [Float](repeating: 0, count: linesCount)
 
-        vDSP_desamp(processingBuffer,
-                    Int(samplesPerLine),
-                    filter, &wavePointsData,
-                    UInt(linesCount),
-                    UInt(samplesPerLine))
+        vDSP_desamp(processingBuffer, Int(samplesPerLine), filter, &wavePointsData, UInt(linesCount), UInt(samplesPerLine))
 
-        let width = CGFloat(linesCount) * (WaveView.lineWidth + WaveView.marginBetweenLines)
-        waveViewWidth.accept(width)
         wavePoints.accept(wavePointsData.map { CGFloat($0) })
     }
 }

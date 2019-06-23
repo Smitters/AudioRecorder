@@ -10,23 +10,21 @@ import AVFoundation
 import RxSwift
 import RxCocoa
 
-private let defaultDurationValue = "00.00"
-
 class CreateAudioRecordViewModel {
     private let model: CreateAudioRecordModel
-    private let coordinator: CoordinatorType
+    private let coordinator: Coordinator
 
-    let recordDuration = BehaviorRelay<String>(value: defaultDurationValue)
+    let recordDuration = BehaviorRelay<String>(value: "00.00")
     let isRecording: BehaviorRelay<Bool>
 
     let disposeBag = DisposeBag()
 
-    init(model: CreateAudioRecordModel, coordinator: CoordinatorType) {
+    init(model: CreateAudioRecordModel, coordinator: Coordinator) {
         self.model = model
         self.coordinator = coordinator
         self.isRecording = model.isRecording
 
-        model.recordDuration.map(timeString).bind(to: recordDuration).disposed(by: disposeBag)
+        model.recordDuration.map{ $0.timeString }.bind(to: recordDuration).disposed(by: disposeBag)
         model.recordResult.observeOn(MainScheduler.instance).subscribe(onNext: { record in
             debugPrint("saved record \(record)")
         }, onError: { [weak self] (error) in
@@ -49,14 +47,5 @@ class CreateAudioRecordViewModel {
     func cancel() {
         model.cancelRecording()
         coordinator.dismiss()
-    }
-
-    private func timeString(_ time: TimeInterval) -> String {
-        let formatter = NumberFormatter()
-        formatter.minimumIntegerDigits = 2
-        formatter.maximumFractionDigits = 2
-        formatter.minimumFractionDigits = 2
-
-        return formatter.string(from: NSNumber(value: time)) ?? defaultDurationValue
     }
 }

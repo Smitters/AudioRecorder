@@ -8,16 +8,7 @@
 
 import UIKit
 
-protocol CoordinatorType {
-    func start()
-    func handleAppTerminate()
-    func openAddNewRecordController()
-    func showDetails(for fileName: String)
-    func dismiss()
-    func showError(_ error: Error, completion: (() -> Void)?)
-}
-
-class Coordinator: CoordinatorType {
+class Coordinator {
 
     private lazy var persistence: Persistence = Persistence()
 
@@ -59,9 +50,9 @@ class Coordinator: CoordinatorType {
         topViewController?.present(addNewViewController, animated: true)
     }
 
-    func showDetails(for fileName: String) {
+    func showDetails(for record: AudioRecord) {
         let detailsController = Storyboards.RecordDetails.recordDetailsViewController()
-        let viewModel = RecordDetailsViewModel(recordName: fileName)
+        let viewModel = RecordDetailsViewModel(record: record)
 
         detailsController.viewModel = viewModel
 
