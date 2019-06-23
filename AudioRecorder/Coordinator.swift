@@ -8,6 +8,25 @@
 
 import UIKit
 
+protocol AppCoordinatorType {
+    func startApplication()
+    func handleAppTerminate()
+}
+
+protocol RecordListCoordinatorType {
+    func openAddNewRecordController()
+    func showDetails(for record: AudioRecord)
+}
+
+protocol CreateAudioCoordinatorType {
+    func dismiss()
+    func showError(_ error: Error, completion: (() -> Void)?)
+}
+
+protocol RecordDetailsCoordinatorType {
+    func goBack()
+}
+
 class Coordinator {
 
     private lazy var persistence: Persistence = Persistence()
@@ -27,8 +46,10 @@ class Coordinator {
         self.window = window
         self.navigationController = window?.rootViewController as? UINavigationController
     }
+}
 
-    func start() {
+extension Coordinator: AppCoordinatorType {
+    func startApplication() {
         if let recordListViewController = navigationController?.children.first as? RecordsListViewController {
             let model = RecordsListModel(persistence: persistence)
             let viewModel = RecordsListViewModel(model: model, cordinator: self)
@@ -40,7 +61,9 @@ class Coordinator {
     func handleAppTerminate() {
         persistence.saveChanges()
     }
+}
 
+extension Coordinator: RecordListCoordinatorType {
     func openAddNewRecordController() {
         let addNewViewController = Storyboards.CreateAudioRecorder.createAudioRecordViewController()
         let model = try! CreateAudioRecordModel(persistence: persistence)
@@ -57,13 +80,11 @@ class Coordinator {
 
         navigationController?.pushViewController(detailsController, animated: true)
     }
+}
 
+extension Coordinator: CreateAudioCoordinatorType {
     func dismiss() {
         navigationController?.topViewController?.dismiss(animated: true)
-    }
-
-    func goBack() {
-        navigationController?.popViewController(animated: true)
     }
 
     func showError(_ error: Error, completion: (() -> Void)?) {
@@ -74,5 +95,11 @@ class Coordinator {
         }))
 
         topViewController?.present(alertController, animated: true)
+    }
+}
+
+extension Coordinator: RecordDetailsCoordinatorType {
+    func goBack() {
+        navigationController?.popViewController(animated: true)
     }
 }

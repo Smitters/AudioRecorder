@@ -25,19 +25,15 @@ class RecordPlayer: NSObject {
         }
 
         backgroundQueue.async {
-            do {
-                let url = Directories.recordsDirectory.appendingPathComponent(fileName)
-                try AVAudioSession.sharedInstance().setActive(true)
+            let url = Directories.recordsDirectory.appendingPathComponent(fileName)
+            try? AVAudioSession.sharedInstance().setActive(true)
 
-                self.audioPlayer = try AVAudioPlayer(contentsOf: url)
-                self.audioPlayer?.delegate = self
+            self.audioPlayer = try? AVAudioPlayer(contentsOf: url)
+            self.audioPlayer?.delegate = self
 
-                if self.audioPlayer?.play() == true {
-                    self.isPlaying.accept(true)
-                    self.scheduleTimer()
-                }
-            } catch {
-                debugPrint(error)
+            if self.audioPlayer?.play() == true {
+                self.isPlaying.accept(true)
+                self.scheduleTimer()
             }
         }
     }

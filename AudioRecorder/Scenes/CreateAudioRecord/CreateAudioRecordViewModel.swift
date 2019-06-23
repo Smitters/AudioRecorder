@@ -12,14 +12,14 @@ import RxCocoa
 
 class CreateAudioRecordViewModel {
     private let model: CreateAudioRecordModel
-    private let coordinator: Coordinator
+    private let coordinator: CreateAudioCoordinatorType
 
     let recordDuration = BehaviorRelay<String>(value: "00.00")
     let isRecording: BehaviorRelay<Bool>
 
     let disposeBag = DisposeBag()
 
-    init(model: CreateAudioRecordModel, coordinator: Coordinator) {
+    init(model: CreateAudioRecordModel, coordinator: CreateAudioCoordinatorType) {
         self.model = model
         self.coordinator = coordinator
         self.isRecording = model.isRecording

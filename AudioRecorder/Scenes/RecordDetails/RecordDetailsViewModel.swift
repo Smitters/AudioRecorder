@@ -17,7 +17,7 @@ class RecordDetailsViewModel {
     private let record: AudioRecord
     private let recordPlayer = RecordPlayer()
     private let persistence: Persistence
-    private let coordinator: Coordinator
+    private let coordinator: RecordDetailsCoordinatorType
 
     let wavePoints = BehaviorRelay<[CGFloat]>(value: [])
     let playerProgress: BehaviorRelay<Float>
@@ -25,7 +25,7 @@ class RecordDetailsViewModel {
     let isPlaying: BehaviorRelay<Bool>
     let name: String
 
-    init(record: AudioRecord, persistence: Persistence, coordinator: Coordinator) {
+    init(record: AudioRecord, persistence: Persistence, coordinator: RecordDetailsCoordinatorType) {
         self.record = record
         self.persistence = persistence
         self.coordinator = coordinator

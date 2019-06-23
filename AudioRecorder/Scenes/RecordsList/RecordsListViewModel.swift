@@ -11,7 +11,7 @@ import RxCocoa
 
 class RecordsListViewModel {
     private let model: RecordsListModel
-    private let cordinator: Coordinator
+    private let cordinator: RecordListCoordinatorType
     private let disposeBag = DisposeBag()
     private let recordPlayer = RecordPlayer()
 
@@ -21,7 +21,7 @@ class RecordsListViewModel {
 
     var currentlyPlayedRow: Int?
 
-    init(model: RecordsListModel, cordinator: Coordinator) {
+    init(model: RecordsListModel, cordinator: RecordListCoordinatorType) {
         self.model = model
         self.cordinator = cordinator
         records = model.recordsSubject

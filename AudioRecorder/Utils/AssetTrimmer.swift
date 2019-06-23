@@ -22,8 +22,8 @@ class AssetTrimmer {
         var timeRanges = [CMTimeRange]()
 
         for i in 0..<splitCount {
-            let startTime = CMTime(seconds: durationInSeconds * Double(i) / Double(splitCount), preferredTimescale: 1)
-            let endTime = CMTime(seconds: durationInSeconds * Double(i + 1) / Double(splitCount), preferredTimescale: 1)
+            let startTime = CMTime(seconds: durationInSeconds * Double(i) / Double(splitCount), preferredTimescale: 10000)
+            let endTime = CMTime(seconds: durationInSeconds * Double(i + 1) / Double(splitCount), preferredTimescale: 10000)
             let range = CMTimeRange(start: startTime, end: endTime)
             timeRanges.append(range)
         }
