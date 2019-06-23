@@ -14,7 +14,6 @@ import AVFoundation
 class AssetTrimmerTests: XCTestCase {
 
     var trimmer: AssetTrimmer!
-    var recordsDirectory: URL!
 
     override func setUp() {
         super.setUp()
@@ -23,19 +22,13 @@ class AssetTrimmerTests: XCTestCase {
         let path = Bundle(for: type(of: self)).path(forResource: "sample_44100hz_16s", ofType: "m4a") ?? ""
         let sampleUrl = URL(fileURLWithPath: path)
 
-        // For Travis CI
-        let bundleURL = Bundle(for: type(of: self)).bundleURL
-        recordsDirectory = bundleURL.appendingPathComponent("records")
-        try? FileManager.default.createDirectory(atPath: bundleURL.absoluteString, withIntermediateDirectories: true)
-
         trimmer = AssetTrimmer(fullRecord: sampleUrl)
-        trimmer.recordsDirectory = recordsDirectory
     }
 
     override func tearDown() {
         trimmer = nil
 
-        try? FileManager.default.removeItem(at: recordsDirectory)
+        try? FileManager.default.removeItem(at: Directories.recordsDirectory)
         super.tearDown()
     }
 
@@ -95,11 +88,10 @@ class AssetTrimmerTests: XCTestCase {
 
         let trimExpectation = expectation(description: "Trim asset expectation")
 
-        trimmer.trimAsset(with: timeRange, outputFileName: "output/File/Name") { [weak self] result in
-            guard let self = self else { return }
+        trimmer.trimAsset(with: timeRange, outputFileName: "output/File/Name") { result in
             switch result {
             case .success(let safeFileName):
-                let url = self.recordsDirectory.appendingPathComponent(safeFileName)
+                let url = Directories.recordsDirectory.appendingPathComponent(safeFileName)
                 let trimmedAsset = AVAsset(url: url)
                 let trimmedAssetDuration = CMTimeGetSeconds(trimmedAsset.duration)
 

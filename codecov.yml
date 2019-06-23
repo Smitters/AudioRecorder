@@ -1,1 +1,5 @@
 cat codecov.yml | curl --data-binary @- https://codecov.io/validate
+
+codecov:
+    ignore:
+        - "Pods/*"

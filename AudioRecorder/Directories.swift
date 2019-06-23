@@ -9,6 +9,6 @@
 import Foundation
 
 enum Directories {
-    static let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+    static let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!
     static let recordsDirectory = documentsDirectory.appendingPathComponent("records", isDirectory: true)
 }
