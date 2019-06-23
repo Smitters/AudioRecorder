@@ -1,9 +1,16 @@
+platform :ios, '11.0'
+use_frameworks!
+inhibit_all_warnings!
+
+def testing_pods
+  pod 'RxSwift', '5.0.0'
+  pod 'RxCocoa', '5.0.0'
+end
+
 target 'AudioRecorder' do
-    platform :ios, '11.0'
-    use_frameworks!
-    inhibit_all_warnings!
+  testing_pods
+end
 
-    pod 'RxSwift', '5.0.0'
-    pod 'RxCocoa', '5.0.0'
-
+target 'AudioRecorderTests' do
+  testing_pods
 end

@@ -25,6 +25,7 @@
 		109FC21222BF3226003C5C47 /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109FC21122BF3226003C5C47 /* TimeIntervalExtensions.swift */; };
 		10C08EDB22BF8D230044ACBB /* AssetTrimmerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C08EDA22BF8D230044ACBB /* AssetTrimmerTests.swift */; };
 		10C08EDD22BF8EE50044ACBB /* sample_44100hz_16s.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 10C08EDC22BF8EDE0044ACBB /* sample_44100hz_16s.m4a */; };
+		10C08EE622BFCECD0044ACBB /* RecordPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C08EE522BFCECD0044ACBB /* RecordPlayerTests.swift */; };
 		10E19B6F22BDB27A000117BD /* AssetTrimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E19B6E22BDB27A000117BD /* AssetTrimmer.swift */; };
 		10E19B7122BDF68D000117BD /* AudioRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E19B7022BDF68D000117BD /* AudioRecord.swift */; };
 		10E19B7622BE191D000117BD /* RecordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E19B7522BE191D000117BD /* RecordsTableViewCell.swift */; };
@@ -35,6 +36,7 @@
 		10E19B8622BED4D3000117BD /* RecordDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10E19B8522BED4D3000117BD /* RecordDetails.storyboard */; };
 		10E19B8822BEED51000117BD /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E19B8722BEED51000117BD /* WaveView.swift */; };
 		10EB3D0322BCE1150082092A /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB3D0222BCE1150082092A /* Recorder.swift */; };
+		2AADD44ABCF6C17A3689B825 /* Pods_AudioRecorderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB843DE2C6198429D923CAFD /* Pods_AudioRecorderTests.framework */; };
 		DB2F5CCDE3F0A8503D911646 /* Pods_AudioRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E887BC17D1800EA7D80FB066 /* Pods_AudioRecorder.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,7 @@
 		10C08EE022BFA68E0044ACBB /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		10C08EE222BFA7930044ACBB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		10C08EE422BFC40E0044ACBB /* sample.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sample.gif; sourceTree = "<group>"; };
+		10C08EE522BFCECD0044ACBB /* RecordPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordPlayerTests.swift; sourceTree = "<group>"; };
 		10E19B6E22BDB27A000117BD /* AssetTrimmer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetTrimmer.swift; sourceTree = "<group>"; };
 		10E19B7022BDF68D000117BD /* AudioRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecord.swift; sourceTree = "<group>"; };
 		10E19B7522BE191D000117BD /* RecordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsTableViewCell.swift; sourceTree = "<group>"; };
@@ -85,8 +88,11 @@
 		10E19B8522BED4D3000117BD /* RecordDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecordDetails.storyboard; sourceTree = "<group>"; };
 		10E19B8722BEED51000117BD /* WaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveView.swift; sourceTree = "<group>"; };
 		10EB3D0222BCE1150082092A /* Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
+		4882EC85339C9FF395E312B5 /* Pods-AudioRecorderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioRecorderTests.debug.xcconfig"; path = "Target Support Files/Pods-AudioRecorderTests/Pods-AudioRecorderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5BD98705AE4996DEE5029B00 /* Pods-AudioRecorderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioRecorderTests.release.xcconfig"; path = "Target Support Files/Pods-AudioRecorderTests/Pods-AudioRecorderTests.release.xcconfig"; sourceTree = "<group>"; };
 		73400DCAE2E506EDC01D8088 /* Pods-AudioRecorder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioRecorder.debug.xcconfig"; path = "Target Support Files/Pods-AudioRecorder/Pods-AudioRecorder.debug.xcconfig"; sourceTree = "<group>"; };
 		E887BC17D1800EA7D80FB066 /* Pods_AudioRecorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudioRecorder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB843DE2C6198429D923CAFD /* Pods_AudioRecorderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudioRecorderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AADD44ABCF6C17A3689B825 /* Pods_AudioRecorderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +214,7 @@
 			children = (
 				10C08ED422BF8CEE0044ACBB /* Info.plist */,
 				10C08EDA22BF8D230044ACBB /* AssetTrimmerTests.swift */,
+				10C08EE522BFCECD0044ACBB /* RecordPlayerTests.swift */,
 				10C08EDF22BF952E0044ACBB /* Mocks */,
 			);
 			path = AudioRecorderTests;
@@ -235,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				E887BC17D1800EA7D80FB066 /* Pods_AudioRecorder.framework */,
+				EB843DE2C6198429D923CAFD /* Pods_AudioRecorderTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -244,6 +253,8 @@
 			children = (
 				73400DCAE2E506EDC01D8088 /* Pods-AudioRecorder.debug.xcconfig */,
 				0360CB726683D540F3E78E5D /* Pods-AudioRecorder.release.xcconfig */,
+				4882EC85339C9FF395E312B5 /* Pods-AudioRecorderTests.debug.xcconfig */,
+				5BD98705AE4996DEE5029B00 /* Pods-AudioRecorderTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -274,9 +285,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10C08ED722BF8CEE0044ACBB /* Build configuration list for PBXNativeTarget "AudioRecorderTests" */;
 			buildPhases = (
+				A57F2249B408230B560C2C66 /* [CP] Check Pods Manifest.lock */,
 				10C08ECC22BF8CEE0044ACBB /* Sources */,
 				10C08ECD22BF8CEE0044ACBB /* Frameworks */,
 				10C08ECE22BF8CEE0044ACBB /* Resources */,
+				79044DCD5207398F1564EDD2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -351,6 +364,54 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		79044DCD5207398F1564EDD2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AudioRecorderTests/Pods-AudioRecorderTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AudioRecorderTests/Pods-AudioRecorderTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A57F2249B408230B560C2C66 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AudioRecorderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D1BE019616FF9A0E154824E3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -435,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10C08EDB22BF8D230044ACBB /* AssetTrimmerTests.swift in Sources */,
+				10C08EE622BFCECD0044ACBB /* RecordPlayerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +688,7 @@
 		};
 		10C08ED822BF8CEE0044ACBB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4882EC85339C9FF395E312B5 /* Pods-AudioRecorderTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -648,6 +711,7 @@
 		};
 		10C08ED922BF8CEE0044ACBB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BD98705AE4996DEE5029B00 /* Pods-AudioRecorderTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;

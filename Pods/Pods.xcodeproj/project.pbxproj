@@ -57,6 +57,7 @@
 		21ED7648338D24621D298439A6E3B311 /* SynchronizedDisposeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAAE553F93BBDE19451165A8AD63747 /* SynchronizedDisposeType.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		23B66BF6824C5D1143FC65E28EC92EB3 /* ControlProperty+Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9485BB279F4197D0253FF09A947007 /* ControlProperty+Driver.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		23D3BE2C79B17AAA5AF4A666C5720280 /* PrimitiveSequence+Zip+arity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C091F7F61105B90385D8EB5681045C69 /* PrimitiveSequence+Zip+arity.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		242D7C8F27E46D70745EF3F6DF48EC9F /* Pods-AudioRecorderTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CF43F18098ACA372045CEBB12C7D6447 /* Pods-AudioRecorderTests-dummy.m */; };
 		28F4A40B2B98843BBF07ADBC25C970C1 /* Sink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968384E5E69FDA44B70C290983579F8 /* Sink.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		29822818DEC8C37152C5E3BBF5895858 /* DispatchQueueConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CEFCCE3B2BBEFF721CEB9D0DC154CB /* DispatchQueueConfiguration.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		29EA29F978FF42A978E8601060A63225 /* ConcurrentDispatchQueueScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276C2421862D76707360FB334B0A7F2 /* ConcurrentDispatchQueueScheduler.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -84,6 +85,7 @@
 		3F7CDC92728D33DF6CA750D921CEB3DF /* Concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96D764B4278874D5F7D17C022B96FD6 /* Concat.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		407CD086B501928EF2444B3C30FC8031 /* UISlider+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB8FA8085539DBBEDE668A2DCF83F2D /* UISlider+Rx.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		40D4F7D531AD52CCEB1F58B2B7BDE5DE /* Date+Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BD3303199AAABD6BA75C195AD247F6 /* Date+Dispatch.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		40E62B096BB8D5681AAD0E1D2FA184D6 /* Pods-AudioRecorderTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FD92BF229AD138A52939F6E0E78A3FA9 /* Pods-AudioRecorderTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41B0AAE6399662BB4213D19D600E7F46 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E269D8DF071693BE73E5456E5B1DD4 /* Event.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		426AB0DD4B9FD7D5C06465B2FC009FCA /* _RX.h in Headers */ = {isa = PBXBuildFile; fileRef = BF437833DC887106E420760C9047CD26 /* _RX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		42C4FD9625D1ACD73BFDA72A1A4BD6F3 /* UIActivityIndicatorView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2BD1D13A34D51AD79BAEEF6A906269 /* UIActivityIndicatorView+Rx.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -239,13 +241,13 @@
 		CDA66D8F9CC1B87E5E720111BC34FBE9 /* BehaviorSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF67D05BF47CDE6C027DA49F4ED823 /* BehaviorSubject.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CE05173BC179EF3BF2DB70B01F8D90E2 /* Completable+AndThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F791CEBEBEABA5BD1A25C19EA5244C2 /* Completable+AndThen.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CEAD5566213F5D96B4CC36B89E30AC27 /* TakeUntil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE117A961A2C27CF979F51E068F1A66 /* TakeUntil.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		CF9F5A2F182A718A63E6E09CD917D51E /* Pods-AudioRecorder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FAEF22BF77496FEAB36BCAD4879155 /* Pods-AudioRecorder-dummy.m */; };
+		CF9F5A2F182A718A63E6E09CD917D51E /* Pods-AudioRecorder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D0F916C8F1C978FB8912408397B25A /* Pods-AudioRecorder-dummy.m */; };
 		CFEF0D7EABC7AE23CC8BFB27127A398D /* _RXDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = E729D60704CDA255D4AFA5179F510DDF /* _RXDelegateProxy.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D0F7B581861BCAF16400515C5DF2EE92 /* UINavigationController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164F01D21D407F9F7745F3C4952F0F9F /* UINavigationController+Rx.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D126491D04C41D2F39D273244F2909D0 /* RetryWhen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903CC3B43CF196BABE1203F0937613C4 /* RetryWhen.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D15BB35CDBC7FE23DBD8C6D6E4B17CCB /* Multicast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA83F9614A3E43A539A5727CA96A1A43 /* Multicast.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D1D2C2DAA339E72E489DC6A216C7EC6E /* SerialDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619F53F78FC12A860B7DF2FC04B00A33 /* SerialDisposable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D27067E0B8882A0DBC254FC04DC64B62 /* Pods-AudioRecorder-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 285E16CE708E60D269A3D406623CA85C /* Pods-AudioRecorder-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D27067E0B8882A0DBC254FC04DC64B62 /* Pods-AudioRecorder-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8254442B3FDA04E0225F5B7A6A1EFB11 /* Pods-AudioRecorder-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D310DFC5F7621903045561AA71C9DAD0 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6990F844F79880502C80E931519D /* Signal.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D3A4265E1A0CF9CA111ED9198B851E98 /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A780E04EAFE3A2E064F8AA84F5507F4 /* Lock.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D4C7F482AA11CEAE02BD0F756E4B42E9 /* SubscribeOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D523DAA704FC762EDB45E44C204750AB /* SubscribeOn.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -297,6 +299,7 @@
 		F9BBB82E453FE9BE347F4D327260F10A /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7D3611E621D96E1DD0BEE472B8A12E /* Optional.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FA9C7BBC378A3DC96A0FB5B2DCB1878E /* AsyncSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72193C9FE99D5ABA78C622162F58F839 /* AsyncSubject.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FB1976BBCB2F0F9A4F8B3D5B63B84A7D /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C09E02611FCDF21770E9B7EE5A6900C /* Errors.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FBD4F417C440979E9A6D4D4EE73456AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC0FDAF12359550CBE2DD87B2DB886E4 /* Foundation.framework */; };
 		FCC5E9E3E9474A7F246B8E1C67E1347F /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969BF6001B72D13F735A81AFD1CB6A92 /* Window.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FCD31E6883DF96B0B8E71CC859C45BD0 /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05198E3DF8DABC53282399D602C81FF0 /* Disposable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FF46225B6AAFE0D1271912F4EE9FA477 /* DelegateProxyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4087A895EFDE561699177C058672F45 /* DelegateProxyType.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -345,24 +348,47 @@
 			remoteGlobalIDString = 2808FDBFB0D88A7817A90AEE65E6283E;
 			remoteInfo = RxSwift;
 		};
+		AA799A1AB75B3E7F1DEBF9EDC42ADB32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2EBF63D212252EBA895460C5798B1C0C;
+			remoteInfo = RxRelay;
+		};
+		C4EBC344C4982339D8239485A3A4426D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2808FDBFB0D88A7817A90AEE65E6283E;
+			remoteInfo = RxSwift;
+		};
+		D3BFABD076FE213638A4F843614BB3E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A8255A5CCA38F1D00E89F9E42565458;
+			remoteInfo = RxCocoa;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		01F7FB38AE7C00BAED4A2120B0728398 /* RecursiveLock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecursiveLock.swift; path = Platform/RecursiveLock.swift; sourceTree = "<group>"; };
+		02F5EE3A374B10A0FEDE1DEBFAEB98B6 /* Pods-AudioRecorderTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AudioRecorderTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		03A837246C7008D2873A9D0821C3882D /* ReplaySubject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaySubject.swift; path = RxSwift/Subjects/ReplaySubject.swift; sourceTree = "<group>"; };
 		05198E3DF8DABC53282399D602C81FF0 /* Disposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Disposable.swift; path = RxSwift/Disposable.swift; sourceTree = "<group>"; };
 		06575FA8D46860B01DA84B29966380C7 /* ControlProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ControlProperty.swift; path = RxCocoa/Traits/ControlProperty.swift; sourceTree = "<group>"; };
 		065FA10212E211C523FFB1B095B008C0 /* VirtualTimeScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VirtualTimeScheduler.swift; path = RxSwift/Schedulers/VirtualTimeScheduler.swift; sourceTree = "<group>"; };
 		068EE258E08FF2C8555CF7D7F5E49844 /* RxCollectionViewDataSourcePrefetchingProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxCollectionViewDataSourcePrefetchingProxy.swift; path = RxCocoa/iOS/Proxies/RxCollectionViewDataSourcePrefetchingProxy.swift; sourceTree = "<group>"; };
 		06B8084D99B99D8CB291A617776F3871 /* Observable+Bind.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Observable+Bind.swift"; path = "RxCocoa/Common/Observable+Bind.swift"; sourceTree = "<group>"; };
-		07B1F60421F2C5361FA3C0A6E536D75E /* Pods-AudioRecorder-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AudioRecorder-Info.plist"; sourceTree = "<group>"; };
 		0830EF3E4A102C60C9A92306465FB8B7 /* ElementAt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ElementAt.swift; path = RxSwift/Observables/ElementAt.swift; sourceTree = "<group>"; };
 		084B212241FBE6A50B701C867F5C192D /* RxCocoaRuntime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RxCocoaRuntime.h; path = RxCocoa/Runtime/include/RxCocoaRuntime.h; sourceTree = "<group>"; };
 		086204A0CCE74B913062C08C1E556CDC /* LockOwnerType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LockOwnerType.swift; path = RxSwift/Concurrency/LockOwnerType.swift; sourceTree = "<group>"; };
+		09D252001A62B460EC7CFE4DDBBC7500 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RxCocoa.framework; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AA7F724EFE98C9EB0E57BD288304B68 /* Pods_AudioRecorderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AudioRecorderTests.framework; path = "Pods-AudioRecorderTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DDCC901844B4A36EEF40129B7103A10 /* SingleAsync.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleAsync.swift; path = RxSwift/Observables/SingleAsync.swift; sourceTree = "<group>"; };
 		0DE117A961A2C27CF979F51E068F1A66 /* TakeUntil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TakeUntil.swift; path = RxSwift/Observables/TakeUntil.swift; sourceTree = "<group>"; };
+		0FEB875BA8C94F64353313FAF8E2E338 /* Pods_AudioRecorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AudioRecorder.framework; path = "Pods-AudioRecorder.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10719C1D0FA16CEE39E66CE4B9C2082E /* Materialize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Materialize.swift; path = RxSwift/Observables/Materialize.swift; sourceTree = "<group>"; };
-		123C9B3C0263CC1375612A873D5509E1 /* Pods-AudioRecorder.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AudioRecorder.modulemap"; sourceTree = "<group>"; };
 		12BC9E960CC880993ED4ABDFC8DE7762 /* RxTextStorageDelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxTextStorageDelegateProxy.swift; path = RxCocoa/iOS/Proxies/RxTextStorageDelegateProxy.swift; sourceTree = "<group>"; };
 		143459C71D68B80CD98A6E273B36D1F4 /* Create.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Create.swift; path = RxSwift/Observables/Create.swift; sourceTree = "<group>"; };
 		15690FEE323D7F7606FD45CB34CE4F87 /* UISwitch+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISwitch+Rx.swift"; path = "RxCocoa/iOS/UISwitch+Rx.swift"; sourceTree = "<group>"; };
@@ -372,6 +398,7 @@
 		181A352F770433533BF4222E8DF4D8A7 /* SchedulerServices+Emulation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SchedulerServices+Emulation.swift"; path = "RxSwift/Schedulers/SchedulerServices+Emulation.swift"; sourceTree = "<group>"; };
 		1834E77222D1146F21B389DB94757EE6 /* _RXKVOObserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _RXKVOObserver.h; path = RxCocoa/Runtime/include/_RXKVOObserver.h; sourceTree = "<group>"; };
 		19303E2B30F6DAF544C0640F96052A38 /* BooleanDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BooleanDisposable.swift; path = RxSwift/Disposables/BooleanDisposable.swift; sourceTree = "<group>"; };
+		19D707FC7FD74D6C71953B2BE8F0B013 /* Pods-AudioRecorder-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AudioRecorder-frameworks.sh"; sourceTree = "<group>"; };
 		1ADD059B770B1AC555EAD14414121C28 /* RxSearchControllerDelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxSearchControllerDelegateProxy.swift; path = RxCocoa/iOS/Proxies/RxSearchControllerDelegateProxy.swift; sourceTree = "<group>"; };
 		1AE6EDB7B0ABA981472C6776E0E8C961 /* AnonymousDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnonymousDisposable.swift; path = RxSwift/Disposables/AnonymousDisposable.swift; sourceTree = "<group>"; };
 		1B4DFD50BA4002B2F1822C2328B0B432 /* Just.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Just.swift; path = RxSwift/Observables/Just.swift; sourceTree = "<group>"; };
@@ -388,6 +415,7 @@
 		216DA740CB2D8F1B9684DDA69C9A3D8B /* InvocableType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InvocableType.swift; path = RxSwift/Schedulers/Internal/InvocableType.swift; sourceTree = "<group>"; };
 		21CADB4A60D29A93AE33ED05AC3BE2CC /* ScheduledItemType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScheduledItemType.swift; path = RxSwift/Schedulers/Internal/ScheduledItemType.swift; sourceTree = "<group>"; };
 		21F680A0A7D53CBE10B71AC32606FD5C /* UITextField+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+Rx.swift"; path = "RxCocoa/iOS/UITextField+Rx.swift"; sourceTree = "<group>"; };
+		2205C51BE07FB48116DDFAF0D88918E3 /* Pods-AudioRecorder-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AudioRecorder-acknowledgements.markdown"; sourceTree = "<group>"; };
 		226B9311E1B3E615CB944C3F3A510E4A /* UIViewController+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Rx.swift"; path = "RxCocoa/iOS/UIViewController+Rx.swift"; sourceTree = "<group>"; };
 		2467FDCD5386546E715ADFE4A7E725C7 /* NSImageView+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSImageView+Rx.swift"; path = "RxCocoa/macOS/NSImageView+Rx.swift"; sourceTree = "<group>"; };
 		24681EDE7668B5438591D2E5822105E4 /* SubscriptionDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SubscriptionDisposable.swift; path = RxSwift/Disposables/SubscriptionDisposable.swift; sourceTree = "<group>"; };
@@ -400,24 +428,22 @@
 		26872CCD69C5DE2C894CF7E10D7B2694 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26B78076F8DED7097AA506ED76F2F684 /* RxPickerViewDataSourceProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxPickerViewDataSourceProxy.swift; path = RxCocoa/iOS/Proxies/RxPickerViewDataSourceProxy.swift; sourceTree = "<group>"; };
 		26C57DC034038DB08252ADFF4C5BA79A /* RxRelay-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RxRelay-Info.plist"; sourceTree = "<group>"; };
+		26EF2855A6AA0DDEECE480CA5B5B1B3D /* Pods-AudioRecorderTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AudioRecorderTests-Info.plist"; sourceTree = "<group>"; };
 		27DB84F55C01B2D8F79F18B29D135686 /* Queue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Queue.swift; path = Platform/DataStructures/Queue.swift; sourceTree = "<group>"; };
-		285E16CE708E60D269A3D406623CA85C /* Pods-AudioRecorder-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AudioRecorder-umbrella.h"; sourceTree = "<group>"; };
 		28D40F3B717B2260B5D67514EBEF134B /* PublishRelay+Signal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PublishRelay+Signal.swift"; path = "RxCocoa/Traits/Signal/PublishRelay+Signal.swift"; sourceTree = "<group>"; };
 		2A780E04EAFE3A2E064F8AA84F5507F4 /* Lock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Lock.swift; path = RxSwift/Concurrency/Lock.swift; sourceTree = "<group>"; };
 		2A994B01A44F512C83C63F0231604E6B /* KeyPathBinder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyPathBinder.swift; path = RxCocoa/Common/KeyPathBinder.swift; sourceTree = "<group>"; };
-		2AC222D8893648500B369890173C51EA /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC53735C617D942B9B7F5CE2EBFF44A /* UIScrollView+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIScrollView+Rx.swift"; path = "RxCocoa/iOS/UIScrollView+Rx.swift"; sourceTree = "<group>"; };
 		2C659158EB9D5E9B7914C4CF7C6552E0 /* Using.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Using.swift; path = RxSwift/Observables/Using.swift; sourceTree = "<group>"; };
 		2D5E80907AF34C8557F8FBF8192F0943 /* GroupBy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupBy.swift; path = RxSwift/Observables/GroupBy.swift; sourceTree = "<group>"; };
+		307DDFD61D03BD2803AEECB5AEFD8167 /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RxRelay.framework; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A97690C76DF0DB2E6AD820AF10E8BC /* AnonymousObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnonymousObserver.swift; path = RxSwift/Observers/AnonymousObserver.swift; sourceTree = "<group>"; };
 		33153B50CB8F35B9D2D6D18EC74F3F6C /* Completable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Completable.swift; path = RxSwift/Traits/Completable.swift; sourceTree = "<group>"; };
 		33E59F9B0354613A3326E094AE3ACB73 /* TakeLast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TakeLast.swift; path = RxSwift/Observables/TakeLast.swift; sourceTree = "<group>"; };
 		345007403E9DEAD8E21C93537C683CA9 /* InfiniteSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InfiniteSequence.swift; path = Platform/DataStructures/InfiniteSequence.swift; sourceTree = "<group>"; };
-		35701591F308B3760A0F3DAADF194B53 /* Pods-AudioRecorder-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AudioRecorder-frameworks.sh"; sourceTree = "<group>"; };
 		359732911D3E8F40AC649AEFC7A37BF3 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = RxSwift/SwiftSupport/SwiftSupport.swift; sourceTree = "<group>"; };
 		35BF67D05BF47CDE6C027DA49F4ED823 /* BehaviorSubject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BehaviorSubject.swift; path = RxSwift/Subjects/BehaviorSubject.swift; sourceTree = "<group>"; };
 		38AFC0B1949A86BD208881D7C1FEC40A /* CompositeDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompositeDisposable.swift; path = RxSwift/Disposables/CompositeDisposable.swift; sourceTree = "<group>"; };
-		3944C216235B2F73C068D846E6A50667 /* Pods-AudioRecorder-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AudioRecorder-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3B1032E4725D2F41285C67C339BFFA6F /* Reactive.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Reactive.swift; path = RxSwift/Reactive.swift; sourceTree = "<group>"; };
 		3D3E7FF0014B39BFDED858C229882B9E /* UICollectionView+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Rx.swift"; path = "RxCocoa/iOS/UICollectionView+Rx.swift"; sourceTree = "<group>"; };
 		41DBE9EBE2F0E1C2601F891883FE7D21 /* Bag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bag.swift; path = Platform/DataStructures/Bag.swift; sourceTree = "<group>"; };
@@ -440,11 +466,13 @@
 		4FA8C643413E1556A3F1D08B67136887 /* Binder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Binder.swift; path = RxCocoa/Common/Binder.swift; sourceTree = "<group>"; };
 		4FEF164B1310BEEFC5260B486243C457 /* ConcurrentMainScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConcurrentMainScheduler.swift; path = RxSwift/Schedulers/ConcurrentMainScheduler.swift; sourceTree = "<group>"; };
 		50B861C39119F1F6C4E36F5F867D7EEF /* UIBarButtonItem+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIBarButtonItem+Rx.swift"; path = "RxCocoa/iOS/UIBarButtonItem+Rx.swift"; sourceTree = "<group>"; };
+		511C7096AB9D70C5BB369E3DD6032179 /* Pods-AudioRecorder-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AudioRecorder-acknowledgements.plist"; sourceTree = "<group>"; };
 		51629F35E85BA56F92EFB8F696F6AD78 /* UISearchController+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISearchController+Rx.swift"; path = "RxCocoa/iOS/UISearchController+Rx.swift"; sourceTree = "<group>"; };
 		521583D07A73D282D126C6DC10610A83 /* Reduce.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Reduce.swift; path = RxSwift/Observables/Reduce.swift; sourceTree = "<group>"; };
 		531B0FBA96DDECBDA9E2A68AC516B544 /* ObservableType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObservableType.swift; path = RxSwift/ObservableType.swift; sourceTree = "<group>"; };
 		53CB8FA792701B97900844DD88F9A3AD /* TextInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextInput.swift; path = RxCocoa/Common/TextInput.swift; sourceTree = "<group>"; };
 		54E7DF0485DB8B9636EEA4B8E7BC3ABE /* NSLayoutConstraint+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSLayoutConstraint+Rx.swift"; path = "RxCocoa/Common/NSLayoutConstraint+Rx.swift"; sourceTree = "<group>"; };
+		55723AABA3B3275CE490B72A70000107 /* Pods-AudioRecorder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AudioRecorder.debug.xcconfig"; sourceTree = "<group>"; };
 		55849747AF5CF9A7C1E294B18B17FBC5 /* Map.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Map.swift; path = RxSwift/Observables/Map.swift; sourceTree = "<group>"; };
 		5643AD0134E2507F11438FAA8CD63D95 /* ShareReplayScope.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShareReplayScope.swift; path = RxSwift/Observables/ShareReplayScope.swift; sourceTree = "<group>"; };
 		5689637888CB13DC3E2C61CF9A9CA642 /* SynchronizedOnType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SynchronizedOnType.swift; path = RxSwift/Concurrency/SynchronizedOnType.swift; sourceTree = "<group>"; };
@@ -452,6 +480,7 @@
 		5B941BF304A8C572E2EBD87AB0B2AA93 /* RxRelay.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RxRelay.modulemap; sourceTree = "<group>"; };
 		5C719B3BF07FC0CED3DADAA24BB3A327 /* HistoricalSchedulerTimeConverter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HistoricalSchedulerTimeConverter.swift; path = RxSwift/Schedulers/HistoricalSchedulerTimeConverter.swift; sourceTree = "<group>"; };
 		5D3DBF140D99259674373F92F8D30848 /* RxTableViewDataSourceType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxTableViewDataSourceType.swift; path = RxCocoa/iOS/Protocols/RxTableViewDataSourceType.swift; sourceTree = "<group>"; };
+		5F85326ED087C5F95EAD4ABB5778E969 /* Pods-AudioRecorderTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AudioRecorderTests-frameworks.sh"; sourceTree = "<group>"; };
 		60EB3DD7F912250B2CC7BF2E5274E009 /* Deprecated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecated.swift; path = RxSwift/Deprecated.swift; sourceTree = "<group>"; };
 		619F53F78FC12A860B7DF2FC04B00A33 /* SerialDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SerialDisposable.swift; path = RxSwift/Disposables/SerialDisposable.swift; sourceTree = "<group>"; };
 		624DF70DA6337C9252F91350F4DE1C23 /* UITabBar+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITabBar+Rx.swift"; path = "RxCocoa/iOS/UITabBar+Rx.swift"; sourceTree = "<group>"; };
@@ -477,9 +506,9 @@
 		7C347D5700BFD967CA1868FBA751B3FC /* RxCocoa.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RxCocoa.modulemap; sourceTree = "<group>"; };
 		7D2074D6937006C61DE7F7E1C7711810 /* Zip+arity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Zip+arity.swift"; path = "RxSwift/Observables/Zip+arity.swift"; sourceTree = "<group>"; };
 		7D46C181823A29A28B91B3D130BF750D /* SharedSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SharedSequence.swift; path = RxCocoa/Traits/SharedSequence/SharedSequence.swift; sourceTree = "<group>"; };
-		7D54BB354B6DD1775971634008ED6B1D /* Pods_AudioRecorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudioRecorder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FACD7367317C0606898CC2BA1EA4418 /* WithLatestFrom.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WithLatestFrom.swift; path = RxSwift/Observables/WithLatestFrom.swift; sourceTree = "<group>"; };
 		81BD3303199AAABD6BA75C195AD247F6 /* Date+Dispatch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Dispatch.swift"; path = "RxSwift/Date+Dispatch.swift"; sourceTree = "<group>"; };
+		8254442B3FDA04E0225F5B7A6A1EFB11 /* Pods-AudioRecorder-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AudioRecorder-umbrella.h"; sourceTree = "<group>"; };
 		83545CB205FE942C79BF86398A9C7015 /* ObservableType+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ObservableType+Extensions.swift"; path = "RxSwift/ObservableType+Extensions.swift"; sourceTree = "<group>"; };
 		856D90C88C18328659F21613223F2A07 /* RxCocoa-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RxCocoa-Info.plist"; sourceTree = "<group>"; };
 		85A925234A3B349352F442693FF9D005 /* _RXDelegateProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _RXDelegateProxy.h; path = RxCocoa/Runtime/include/_RXDelegateProxy.h; sourceTree = "<group>"; };
@@ -487,6 +516,7 @@
 		87B15698997EA9C9B3F7EAD9A5526C32 /* DefaultIfEmpty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultIfEmpty.swift; path = RxSwift/Observables/DefaultIfEmpty.swift; sourceTree = "<group>"; };
 		88A17E91A55B61F69AA91F5760CA1DD1 /* Timeout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeout.swift; path = RxSwift/Observables/Timeout.swift; sourceTree = "<group>"; };
 		88A90927859FB03818927574D0E3D32A /* _RXKVOObserver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = _RXKVOObserver.m; path = RxCocoa/Runtime/_RXKVOObserver.m; sourceTree = "<group>"; };
+		88D0F916C8F1C978FB8912408397B25A /* Pods-AudioRecorder-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AudioRecorder-dummy.m"; sourceTree = "<group>"; };
 		8B22658A0C4952C33D57AEF5C88CBEF6 /* SectionedViewDataSourceType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SectionedViewDataSourceType.swift; path = RxCocoa/Common/SectionedViewDataSourceType.swift; sourceTree = "<group>"; };
 		8BE8CE4C1CAB03499745238D515908A9 /* RefCountDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RefCountDisposable.swift; path = RxSwift/Disposables/RefCountDisposable.swift; sourceTree = "<group>"; };
 		8C3C7CF2BE40A51AE96FA3844EC58B52 /* String+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Rx.swift"; path = "RxSwift/Extensions/String+Rx.swift"; sourceTree = "<group>"; };
@@ -494,35 +524,34 @@
 		8CCB0A899D4931C6EB29C12B7CE03095 /* SingleAssignmentDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleAssignmentDisposable.swift; path = RxSwift/Disposables/SingleAssignmentDisposable.swift; sourceTree = "<group>"; };
 		8D4C0AE4ACF7D78FFB17E48873159B28 /* _RXObjCRuntime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _RXObjCRuntime.h; path = RxCocoa/Runtime/include/_RXObjCRuntime.h; sourceTree = "<group>"; };
 		8D889DB1B5EB1DCDEA27839383460AD3 /* RxRelay-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RxRelay-umbrella.h"; sourceTree = "<group>"; };
-		8F731E040C534A1A389AF01ADF3E4EB5 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F9CC7FDD9001077EC8160C5EC387DAA /* Scan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Scan.swift; path = RxSwift/Observables/Scan.swift; sourceTree = "<group>"; };
 		903CC3B43CF196BABE1203F0937613C4 /* RetryWhen.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryWhen.swift; path = RxSwift/Observables/RetryWhen.swift; sourceTree = "<group>"; };
 		9276C2421862D76707360FB334B0A7F2 /* ConcurrentDispatchQueueScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConcurrentDispatchQueueScheduler.swift; path = RxSwift/Schedulers/ConcurrentDispatchQueueScheduler.swift; sourceTree = "<group>"; };
-		932571A3C77C3166DC84DD7C2A5C550D /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		93B3F8194883F72B4CF78507D2405511 /* Pods-AudioRecorder-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AudioRecorder-acknowledgements.plist"; sourceTree = "<group>"; };
 		94EAFE0EA8173603D2C80DB11262DDDB /* TailRecursiveSink.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TailRecursiveSink.swift; path = RxSwift/Observers/TailRecursiveSink.swift; sourceTree = "<group>"; };
 		954D4FB957EBC3D76C0654E7625351DC /* RxCocoa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RxCocoa.xcconfig; sourceTree = "<group>"; };
 		969BF6001B72D13F735A81AFD1CB6A92 /* Window.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Window.swift; path = RxSwift/Observables/Window.swift; sourceTree = "<group>"; };
 		96FD48C64220BEF5EADE93C70E68586D /* BehaviorRelay+Driver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "BehaviorRelay+Driver.swift"; path = "RxCocoa/Traits/Driver/BehaviorRelay+Driver.swift"; sourceTree = "<group>"; };
 		9711F54F00264314165B34B9BB1DE208 /* PublishRelay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PublishRelay.swift; path = RxRelay/PublishRelay.swift; sourceTree = "<group>"; };
 		9717C8A05C44E13BBC2C07252867C815 /* Never.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Never.swift; path = RxSwift/Observables/Never.swift; sourceTree = "<group>"; };
+		9743A0C32FBF7B58FB5DD0A417274A50 /* Pods-AudioRecorderTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AudioRecorderTests.modulemap"; sourceTree = "<group>"; };
 		9814138CD111E05B2E9365A5B3C30E55 /* RxSearchBarDelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxSearchBarDelegateProxy.swift; path = RxCocoa/iOS/Proxies/RxSearchBarDelegateProxy.swift; sourceTree = "<group>"; };
 		993E5675975CE64F5318A187BF8A68DD /* First.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = First.swift; path = RxSwift/Observables/First.swift; sourceTree = "<group>"; };
 		9968384E5E69FDA44B70C290983579F8 /* Sink.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sink.swift; path = RxSwift/Observables/Sink.swift; sourceTree = "<group>"; };
 		9A2F6990F844F79880502C80E931519D /* Signal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Signal.swift; path = RxCocoa/Traits/Signal/Signal.swift; sourceTree = "<group>"; };
 		9A8A69D18FC21E212AE32F5CB6640BC2 /* Empty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Empty.swift; path = RxSwift/Observables/Empty.swift; sourceTree = "<group>"; };
 		9AA08AF87FCC1F26384C3A532DB206F2 /* NSTextView+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSTextView+Rx.swift"; path = "RxCocoa/macOS/NSTextView+Rx.swift"; sourceTree = "<group>"; };
+		9AAFF2EC7B847887FDDF9CF04D8F5542 /* Pods-AudioRecorderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AudioRecorderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9B5F383E38378C1DC919228C221595C2 /* UIAlertAction+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIAlertAction+Rx.swift"; path = "RxCocoa/iOS/UIAlertAction+Rx.swift"; sourceTree = "<group>"; };
 		9BAAE553F93BBDE19451165A8AD63747 /* SynchronizedDisposeType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SynchronizedDisposeType.swift; path = RxSwift/Concurrency/SynchronizedDisposeType.swift; sourceTree = "<group>"; };
 		9BB26259EDCAEB0193DEE37B9AF7155D /* Catch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Catch.swift; path = RxSwift/Observables/Catch.swift; sourceTree = "<group>"; };
 		9C16455D724C6111B1BD0A84CD0431F3 /* Throttle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Throttle.swift; path = RxSwift/Observables/Throttle.swift; sourceTree = "<group>"; };
 		9CBB80C74A0BB3D2B1B7C01694EBA5DF /* NSButton+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSButton+Rx.swift"; path = "RxCocoa/macOS/NSButton+Rx.swift"; sourceTree = "<group>"; };
-		9CF573191A950EC8E78BC2B0C87C7F14 /* Pods-AudioRecorder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AudioRecorder.release.xcconfig"; sourceTree = "<group>"; };
 		9D4392766E49C9E74A438680F49FD4E6 /* _RXObjCRuntime.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = _RXObjCRuntime.m; path = RxCocoa/Runtime/_RXObjCRuntime.m; sourceTree = "<group>"; };
 		9D56E9A10D8CCFD70975C2DBC6A99CDD /* NSTextStorage+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSTextStorage+Rx.swift"; path = "RxCocoa/iOS/NSTextStorage+Rx.swift"; sourceTree = "<group>"; };
 		9D738044A5E385965A3B85713E944CC3 /* RxTableViewDataSourcePrefetchingProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxTableViewDataSourcePrefetchingProxy.swift; path = RxCocoa/iOS/Proxies/RxTableViewDataSourcePrefetchingProxy.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E56151ACCF032BADD557272435443FC /* RxCollectionViewDelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxCollectionViewDelegateProxy.swift; path = RxCocoa/iOS/Proxies/RxCollectionViewDelegateProxy.swift; sourceTree = "<group>"; };
+		9EB3AF2859BA685B9EC97A1832AF2443 /* Pods-AudioRecorder-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AudioRecorder-Info.plist"; sourceTree = "<group>"; };
 		9EC4C82142840025707AA5C65B8FEF56 /* Range.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Range.swift; path = RxSwift/Observables/Range.swift; sourceTree = "<group>"; };
 		9EE85A0B21EA83853AF5B5C307BC1308 /* RecursiveScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecursiveScheduler.swift; path = RxSwift/Schedulers/RecursiveScheduler.swift; sourceTree = "<group>"; };
 		9EF09120B383382FA69679C20894202C /* InfiniteSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InfiniteSequence.swift; path = Platform/DataStructures/InfiniteSequence.swift; sourceTree = "<group>"; };
@@ -570,6 +599,7 @@
 		BEFCFEF3196BB76D12715CB619455D51 /* RxSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RxSwift-prefix.pch"; sourceTree = "<group>"; };
 		BF437833DC887106E420760C9047CD26 /* _RX.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _RX.h; path = RxCocoa/Runtime/include/_RX.h; sourceTree = "<group>"; };
 		BF832DC6DC37EEA45FDB17C6A01C7D71 /* NSTextField+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSTextField+Rx.swift"; path = "RxCocoa/macOS/NSTextField+Rx.swift"; sourceTree = "<group>"; };
+		BFC6B81EE343001AF4AC3B8DD3984148 /* Pods-AudioRecorder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AudioRecorder.release.xcconfig"; sourceTree = "<group>"; };
 		C03EB186FFC003882D80DDDF012B3722 /* Bag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bag.swift; path = Platform/DataStructures/Bag.swift; sourceTree = "<group>"; };
 		C091F7F61105B90385D8EB5681045C69 /* PrimitiveSequence+Zip+arity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PrimitiveSequence+Zip+arity.swift"; path = "RxSwift/Traits/PrimitiveSequence+Zip+arity.swift"; sourceTree = "<group>"; };
 		C0D593777C4388FEE21F0C6530E7CF32 /* CurrentThreadScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CurrentThreadScheduler.swift; path = RxSwift/Schedulers/CurrentThreadScheduler.swift; sourceTree = "<group>"; };
@@ -595,7 +625,9 @@
 		CCCDA2096E38B4163842CAAA1FE2C14B /* Take.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Take.swift; path = RxSwift/Observables/Take.swift; sourceTree = "<group>"; };
 		CD9485BB279F4197D0253FF09A947007 /* ControlProperty+Driver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ControlProperty+Driver.swift"; path = "RxCocoa/Traits/Driver/ControlProperty+Driver.swift"; sourceTree = "<group>"; };
 		CDE43492CEC27535D5398944871853C0 /* Platform.Linux.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Platform.Linux.swift; path = Platform/Platform.Linux.swift; sourceTree = "<group>"; };
+		CE63A5A7D00125286DC87F5DA3ACD4EB /* Pods-AudioRecorder.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AudioRecorder.modulemap"; sourceTree = "<group>"; };
 		CE947F60EB01F90ED66E1B10C774D796 /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF43F18098ACA372045CEBB12C7D6447 /* Pods-AudioRecorderTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AudioRecorderTests-dummy.m"; sourceTree = "<group>"; };
 		D021FA766F4C61EE4BAD8410057B02A0 /* UIRefreshControl+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIRefreshControl+Rx.swift"; path = "RxCocoa/iOS/UIRefreshControl+Rx.swift"; sourceTree = "<group>"; };
 		D247AF0E6263FC43CBA8D13BD6A44F78 /* UITextView+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextView+Rx.swift"; path = "RxCocoa/iOS/UITextView+Rx.swift"; sourceTree = "<group>"; };
 		D29AEE9F3A862AF25D6BDD032502E04A /* ImmediateSchedulerType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImmediateSchedulerType.swift; path = RxSwift/ImmediateSchedulerType.swift; sourceTree = "<group>"; };
@@ -604,10 +636,10 @@
 		D47D08D263B0DF615EAD80CB10983CB9 /* RxSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RxSwift.xcconfig; sourceTree = "<group>"; };
 		D523DAA704FC762EDB45E44C204750AB /* SubscribeOn.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SubscribeOn.swift; path = RxSwift/Observables/SubscribeOn.swift; sourceTree = "<group>"; };
 		D5E269D8DF071693BE73E5456E5B1DD4 /* Event.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Event.swift; path = RxSwift/Event.swift; sourceTree = "<group>"; };
-		D6FAEF22BF77496FEAB36BCAD4879155 /* Pods-AudioRecorder-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AudioRecorder-dummy.m"; sourceTree = "<group>"; };
 		D71DC6FE40D205C6F9E03AF9C3009A0F /* UIButton+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Rx.swift"; path = "RxCocoa/iOS/UIButton+Rx.swift"; sourceTree = "<group>"; };
 		D89F89CEB3C174761CCFBBC8AC6CFAA2 /* Driver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Driver.swift; path = RxCocoa/Traits/Driver/Driver.swift; sourceTree = "<group>"; };
 		D8A73C3E19B2E36B40BE926FF2D60510 /* Single.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Single.swift; path = RxSwift/Traits/Single.swift; sourceTree = "<group>"; };
+		DB59D63C2512AD38678A67C9A711076B /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RxSwift.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB8FA8085539DBBEDE668A2DCF83F2D /* UISlider+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISlider+Rx.swift"; path = "RxCocoa/iOS/UISlider+Rx.swift"; sourceTree = "<group>"; };
 		DC512CB646CB4DE06286F4D28823B456 /* NSObject+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Rx.swift"; path = "RxCocoa/Foundation/NSObject+Rx.swift"; sourceTree = "<group>"; };
 		DCCDCB05FA36B116D39688A76144FF43 /* Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Rx.swift; path = RxSwift/Rx.swift; sourceTree = "<group>"; };
@@ -622,6 +654,7 @@
 		E421068EFE69CC0E420DCDF93CC87345 /* SchedulerType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SchedulerType.swift; path = RxSwift/SchedulerType.swift; sourceTree = "<group>"; };
 		E432C9EA4663BEBE993A855BB07255F0 /* Platform.Linux.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Platform.Linux.swift; path = Platform/Platform.Linux.swift; sourceTree = "<group>"; };
 		E630C5443864EEB7F57336BD587C0938 /* Producer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Producer.swift; path = RxSwift/Observables/Producer.swift; sourceTree = "<group>"; };
+		E69B54D636F18896B412832262E7A498 /* Pods-AudioRecorderTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AudioRecorderTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		E6A03071B90662EFE7F9E55A5E1A1553 /* SharedSequence+Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SharedSequence+Operators.swift"; path = "RxCocoa/Traits/SharedSequence/SharedSequence+Operators.swift"; sourceTree = "<group>"; };
 		E6A9A7ED949F82013D8A029FD6472CEC /* NSSlider+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSSlider+Rx.swift"; path = "RxCocoa/macOS/NSSlider+Rx.swift"; sourceTree = "<group>"; };
 		E6E13E9114C0297038D58EA4D300416A /* URLSession+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLSession+Rx.swift"; path = "RxCocoa/Foundation/URLSession+Rx.swift"; sourceTree = "<group>"; };
@@ -638,7 +671,6 @@
 		EE529355F72EDA9414D14942BE5A8635 /* NSControl+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSControl+Rx.swift"; path = "RxCocoa/macOS/NSControl+Rx.swift"; sourceTree = "<group>"; };
 		EF86817DA4D1A24EDC0C9D0C3CA122C2 /* ObserveOn.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObserveOn.swift; path = RxSwift/Observables/ObserveOn.swift; sourceTree = "<group>"; };
 		F05129DFB301074BFD211EBABC8DB38D /* UIStepper+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIStepper+Rx.swift"; path = "RxCocoa/iOS/UIStepper+Rx.swift"; sourceTree = "<group>"; };
-		F1ABE6C67744EE88C958422CAF9C7A0C /* Pods-AudioRecorder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AudioRecorder.debug.xcconfig"; sourceTree = "<group>"; };
 		F1BA29600CEFD7189CF17ABA710442FB /* _RX.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = _RX.m; path = RxCocoa/Runtime/_RX.m; sourceTree = "<group>"; };
 		F1BD248D5562D23F31EB6A863118EDAA /* NopDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NopDisposable.swift; path = RxSwift/Disposables/NopDisposable.swift; sourceTree = "<group>"; };
 		F2029BA2F69485F6B178A6B7B91E6948 /* RxTableViewDelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxTableViewDelegateProxy.swift; path = RxCocoa/iOS/Proxies/RxTableViewDelegateProxy.swift; sourceTree = "<group>"; };
@@ -655,10 +687,12 @@
 		F868DD4157976D374BE204646A0C8617 /* Skip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Skip.swift; path = RxSwift/Observables/Skip.swift; sourceTree = "<group>"; };
 		F9BA7ACC458B511809A5583BDE76F058 /* ControlEvent+Driver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ControlEvent+Driver.swift"; path = "RxCocoa/Traits/Driver/ControlEvent+Driver.swift"; sourceTree = "<group>"; };
 		F9E4EFA3EFDDDAADF0686BE6B2F77892 /* UITabBarItem+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITabBarItem+Rx.swift"; path = "RxCocoa/iOS/UITabBarItem+Rx.swift"; sourceTree = "<group>"; };
+		FB3B802F0BBC6FD0EBBD20904A4E2572 /* Pods-AudioRecorderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AudioRecorderTests.release.xcconfig"; sourceTree = "<group>"; };
 		FB93951C30D474225C42A3D1355D1B6F /* Sample.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sample.swift; path = RxSwift/Observables/Sample.swift; sourceTree = "<group>"; };
 		FBFF08B99A44F775A887CEAF934F3A66 /* UIProgressView+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIProgressView+Rx.swift"; path = "RxCocoa/iOS/UIProgressView+Rx.swift"; sourceTree = "<group>"; };
 		FC06190BCCDD243A2ECDD4F9B8B6B223 /* UIView+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Rx.swift"; path = "RxCocoa/iOS/UIView+Rx.swift"; sourceTree = "<group>"; };
 		FC094FE3DAC8A0F289AE92F67B7F0612 /* NSObject+Rx+RawRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Rx+RawRepresentable.swift"; path = "RxCocoa/Foundation/NSObject+Rx+RawRepresentable.swift"; sourceTree = "<group>"; };
+		FD92BF229AD138A52939F6E0E78A3FA9 /* Pods-AudioRecorderTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AudioRecorderTests-umbrella.h"; sourceTree = "<group>"; };
 		FF718204ECB367AE133A7ED2FA5787EB /* ObservableConvertibleType+Driver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ObservableConvertibleType+Driver.swift"; path = "RxCocoa/Traits/Driver/ObservableConvertibleType+Driver.swift"; sourceTree = "<group>"; };
 		FFE52BD7CADD0C67AE03A8AA6B3660D7 /* RxWebViewDelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxWebViewDelegateProxy.swift; path = RxCocoa/iOS/Proxies/RxWebViewDelegateProxy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -699,6 +733,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F1EAF291F2C3E49A833CFCC6FC392471 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBD4F417C440979E9A6D4D4EE73456AB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -714,23 +756,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/RxRelay";
-			sourceTree = "<group>";
-		};
-		1F8B1823F20315AFDC8DE429045D250C /* Pods-AudioRecorder */ = {
-			isa = PBXGroup;
-			children = (
-				123C9B3C0263CC1375612A873D5509E1 /* Pods-AudioRecorder.modulemap */,
-				3944C216235B2F73C068D846E6A50667 /* Pods-AudioRecorder-acknowledgements.markdown */,
-				93B3F8194883F72B4CF78507D2405511 /* Pods-AudioRecorder-acknowledgements.plist */,
-				D6FAEF22BF77496FEAB36BCAD4879155 /* Pods-AudioRecorder-dummy.m */,
-				35701591F308B3760A0F3DAADF194B53 /* Pods-AudioRecorder-frameworks.sh */,
-				07B1F60421F2C5361FA3C0A6E536D75E /* Pods-AudioRecorder-Info.plist */,
-				285E16CE708E60D269A3D406623CA85C /* Pods-AudioRecorder-umbrella.h */,
-				F1ABE6C67744EE88C958422CAF9C7A0C /* Pods-AudioRecorder.debug.xcconfig */,
-				9CF573191A950EC8E78BC2B0C87C7F14 /* Pods-AudioRecorder.release.xcconfig */,
-			);
-			name = "Pods-AudioRecorder";
-			path = "Target Support Files/Pods-AudioRecorder";
 			sourceTree = "<group>";
 		};
 		2ABAC5C45327453FBBC38E27CFCF57AF /* RxCocoa */ = {
@@ -861,6 +886,7 @@
 				E6E13E9114C0297038D58EA4D300416A /* URLSession+Rx.swift */,
 				AB3ACE384C03CD0498BA6B4FA931B37C /* Support Files */,
 			);
+			name = RxCocoa;
 			path = RxCocoa;
 			sourceTree = "<group>";
 		};
@@ -1034,26 +1060,17 @@
 				C6572F8F737AB664594D147F281C230C /* Zip+Collection.swift */,
 				581B571D57BE9BCB9E7766C87E9A8D90 /* Support Files */,
 			);
+			name = RxSwift;
 			path = RxSwift;
 			sourceTree = "<group>";
 		};
-		69F7CE077D44A8822F4F1F3FFEED6DDE /* Targets Support Files */ = {
+		714FDDDFC99DA0CBC26988CA8520A3B6 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1F8B1823F20315AFDC8DE429045D250C /* Pods-AudioRecorder */,
+				BFE721C3ADF670A966749A88288FEE95 /* Pods-AudioRecorder */,
+				C5C81580879B7F9AA6C969B89C835098 /* Pods-AudioRecorderTests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		6ED351EE1BE3B916A77C423126C3CE1D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7D54BB354B6DD1775971634008ED6B1D /* Pods_AudioRecorder.framework */,
-				8F731E040C534A1A389AF01ADF3E4EB5 /* RxCocoa.framework */,
-				2AC222D8893648500B369890173C51EA /* RxRelay.framework */,
-				932571A3C77C3166DC84DD7C2A5C550D /* RxSwift.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		72CDC587ED269F6897FC6EFD80F25DAA /* RxRelay */ = {
@@ -1065,6 +1082,7 @@
 				A471183DD4CFD1B7A229D75857AD6D21 /* Utils.swift */,
 				116A38C97DC47ED0F40C068B758DAE75 /* Support Files */,
 			);
+			name = RxRelay;
 			path = RxRelay;
 			sourceTree = "<group>";
 		};
@@ -1102,6 +1120,35 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BFE721C3ADF670A966749A88288FEE95 /* Pods-AudioRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				CE63A5A7D00125286DC87F5DA3ACD4EB /* Pods-AudioRecorder.modulemap */,
+				2205C51BE07FB48116DDFAF0D88918E3 /* Pods-AudioRecorder-acknowledgements.markdown */,
+				511C7096AB9D70C5BB369E3DD6032179 /* Pods-AudioRecorder-acknowledgements.plist */,
+				88D0F916C8F1C978FB8912408397B25A /* Pods-AudioRecorder-dummy.m */,
+				19D707FC7FD74D6C71953B2BE8F0B013 /* Pods-AudioRecorder-frameworks.sh */,
+				9EB3AF2859BA685B9EC97A1832AF2443 /* Pods-AudioRecorder-Info.plist */,
+				8254442B3FDA04E0225F5B7A6A1EFB11 /* Pods-AudioRecorder-umbrella.h */,
+				55723AABA3B3275CE490B72A70000107 /* Pods-AudioRecorder.debug.xcconfig */,
+				BFC6B81EE343001AF4AC3B8DD3984148 /* Pods-AudioRecorder.release.xcconfig */,
+			);
+			name = "Pods-AudioRecorder";
+			path = "Target Support Files/Pods-AudioRecorder";
+			sourceTree = "<group>";
+		};
+		C447C62DE3B5DB4B24C448FE28E74987 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0FEB875BA8C94F64353313FAF8E2E338 /* Pods_AudioRecorder.framework */,
+				0AA7F724EFE98C9EB0E57BD288304B68 /* Pods_AudioRecorderTests.framework */,
+				09D252001A62B460EC7CFE4DDBBC7500 /* RxCocoa.framework */,
+				307DDFD61D03BD2803AEECB5AEFD8167 /* RxRelay.framework */,
+				DB59D63C2512AD38678A67C9A711076B /* RxSwift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C47A9CC20608A72758F0158A34F9E691 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -1110,14 +1157,31 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		C5C81580879B7F9AA6C969B89C835098 /* Pods-AudioRecorderTests */ = {
+			isa = PBXGroup;
+			children = (
+				9743A0C32FBF7B58FB5DD0A417274A50 /* Pods-AudioRecorderTests.modulemap */,
+				02F5EE3A374B10A0FEDE1DEBFAEB98B6 /* Pods-AudioRecorderTests-acknowledgements.markdown */,
+				E69B54D636F18896B412832262E7A498 /* Pods-AudioRecorderTests-acknowledgements.plist */,
+				CF43F18098ACA372045CEBB12C7D6447 /* Pods-AudioRecorderTests-dummy.m */,
+				5F85326ED087C5F95EAD4ABB5778E969 /* Pods-AudioRecorderTests-frameworks.sh */,
+				26EF2855A6AA0DDEECE480CA5B5B1B3D /* Pods-AudioRecorderTests-Info.plist */,
+				FD92BF229AD138A52939F6E0E78A3FA9 /* Pods-AudioRecorderTests-umbrella.h */,
+				9AAFF2EC7B847887FDDF9CF04D8F5542 /* Pods-AudioRecorderTests.debug.xcconfig */,
+				FB3B802F0BBC6FD0EBBD20904A4E2572 /* Pods-AudioRecorderTests.release.xcconfig */,
+			);
+			name = "Pods-AudioRecorderTests";
+			path = "Target Support Files/Pods-AudioRecorderTests";
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				870BA3460DA14FDEE0AA7C08014997A4 /* Frameworks */,
 				BCC2B1C1E2FF6402B3869BC9FD1EB9DF /* Pods */,
-				6ED351EE1BE3B916A77C423126C3CE1D /* Products */,
-				69F7CE077D44A8822F4F1F3FFEED6DDE /* Targets Support Files */,
+				C447C62DE3B5DB4B24C448FE28E74987 /* Products */,
+				714FDDDFC99DA0CBC26988CA8520A3B6 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1129,6 +1193,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E00381E0E7C3C3F80F03389DE9B933C0 /* RxRelay-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A195FD8C7AD22A6DAE76E56E673B1BE6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40E62B096BB8D5681AAD0E1D2FA184D6 /* Pods-AudioRecorderTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1180,7 +1252,7 @@
 			);
 			name = RxSwift;
 			productName = RxSwift;
-			productReference = 932571A3C77C3166DC84DD7C2A5C550D /* RxSwift.framework */;
+			productReference = DB59D63C2512AD38678A67C9A711076B /* RxSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2EBF63D212252EBA895460C5798B1C0C /* RxRelay */ = {
@@ -1199,7 +1271,7 @@
 			);
 			name = RxRelay;
 			productName = RxRelay;
-			productReference = 2AC222D8893648500B369890173C51EA /* RxRelay.framework */;
+			productReference = 307DDFD61D03BD2803AEECB5AEFD8167 /* RxRelay.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		6A8255A5CCA38F1D00E89F9E42565458 /* RxCocoa */ = {
@@ -1219,7 +1291,28 @@
 			);
 			name = RxCocoa;
 			productName = RxCocoa;
-			productReference = 8F731E040C534A1A389AF01ADF3E4EB5 /* RxCocoa.framework */;
+			productReference = 09D252001A62B460EC7CFE4DDBBC7500 /* RxCocoa.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6E89198A501DF9D910DBDC3FD8ADF15C /* Pods-AudioRecorderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9DEAEA92B6B2E14C06AABAB67B9D285 /* Build configuration list for PBXNativeTarget "Pods-AudioRecorderTests" */;
+			buildPhases = (
+				A195FD8C7AD22A6DAE76E56E673B1BE6 /* Headers */,
+				E2C6DD1B256848C655AE95BD32CF7FED /* Sources */,
+				F1EAF291F2C3E49A833CFCC6FC392471 /* Frameworks */,
+				61DEB4CB250BB1282817FC637ADA4E41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16C11C1EAF523FD3AF848859E5F730F7 /* PBXTargetDependency */,
+				9950F19E6C2C4DF16AB721E2EC0FB60C /* PBXTargetDependency */,
+				7ADF73ADB413EF3AE97BF3AAFAF35832 /* PBXTargetDependency */,
+			);
+			name = "Pods-AudioRecorderTests";
+			productName = "Pods-AudioRecorderTests";
+			productReference = 0AA7F724EFE98C9EB0E57BD288304B68 /* Pods_AudioRecorderTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A232D2EF93F85366160955CC0980E94E /* Pods-AudioRecorder */ = {
@@ -1240,7 +1333,7 @@
 			);
 			name = "Pods-AudioRecorder";
 			productName = "Pods-AudioRecorder";
-			productReference = 7D54BB354B6DD1775971634008ED6B1D /* Pods_AudioRecorder.framework */;
+			productReference = 0FEB875BA8C94F64353313FAF8E2E338 /* Pods_AudioRecorder.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1250,22 +1343,22 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 6ED351EE1BE3B916A77C423126C3CE1D /* Products */;
+			productRefGroup = C447C62DE3B5DB4B24C448FE28E74987 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				A232D2EF93F85366160955CC0980E94E /* Pods-AudioRecorder */,
+				6E89198A501DF9D910DBDC3FD8ADF15C /* Pods-AudioRecorderTests */,
 				6A8255A5CCA38F1D00E89F9E42565458 /* RxCocoa */,
 				2EBF63D212252EBA895460C5798B1C0C /* RxRelay */,
 				2808FDBFB0D88A7817A90AEE65E6283E /* RxSwift */,
@@ -1289,6 +1382,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5B927362B55707A697249FBFF7B55CB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61DEB4CB250BB1282817FC637ADA4E41 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1609,6 +1709,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E2C6DD1B256848C655AE95BD32CF7FED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				242D7C8F27E46D70745EF3F6DF48EC9F /* Pods-AudioRecorderTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1624,11 +1732,29 @@
 			target = 2EBF63D212252EBA895460C5798B1C0C /* RxRelay */;
 			targetProxy = 7E8BBA21B9B6BE95E961B7FAC68950B1 /* PBXContainerItemProxy */;
 		};
+		16C11C1EAF523FD3AF848859E5F730F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RxCocoa;
+			target = 6A8255A5CCA38F1D00E89F9E42565458 /* RxCocoa */;
+			targetProxy = D3BFABD076FE213638A4F843614BB3E9 /* PBXContainerItemProxy */;
+		};
+		7ADF73ADB413EF3AE97BF3AAFAF35832 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RxSwift;
+			target = 2808FDBFB0D88A7817A90AEE65E6283E /* RxSwift */;
+			targetProxy = C4EBC344C4982339D8239485A3A4426D /* PBXContainerItemProxy */;
+		};
 		9212A84B130BC1E73CCB2BE402938CA2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RxCocoa;
 			target = 6A8255A5CCA38F1D00E89F9E42565458 /* RxCocoa */;
 			targetProxy = 07941583ADA96439C19508CF3F6035CD /* PBXContainerItemProxy */;
+		};
+		9950F19E6C2C4DF16AB721E2EC0FB60C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RxRelay;
+			target = 2EBF63D212252EBA895460C5798B1C0C /* RxRelay */;
+			targetProxy = AA799A1AB75B3E7F1DEBF9EDC42ADB32 /* PBXContainerItemProxy */;
 		};
 		CCC3AE5FB367481D484979EE26FB52BA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1686,9 +1812,47 @@
 			};
 			name = Debug;
 		};
+		0B45C0F1FAE47D8B4A09DBDC818F7B8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AAFF2EC7B847887FDDF9CF04D8F5542 /* Pods-AudioRecorderTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AudioRecorderTests/Pods-AudioRecorderTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AudioRecorderTests/Pods-AudioRecorderTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		1B4B15B2BCB08E3CD93362FC61D182FA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CF573191A950EC8E78BC2B0C87C7F14 /* Pods-AudioRecorder.release.xcconfig */;
+			baseConfigurationReference = BFC6B81EE343001AF4AC3B8DD3984148 /* Pods-AudioRecorder.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1729,7 +1893,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1783,6 +1946,45 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		4D0F240622C499E4EB31F77EDE0FF043 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB3B802F0BBC6FD0EBBD20904A4E2572 /* Pods-AudioRecorderTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AudioRecorderTests/Pods-AudioRecorderTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AudioRecorderTests/Pods-AudioRecorderTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1861,7 +2063,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -2031,7 +2232,7 @@
 		};
 		F11483ED95EC5BE83F3578E250E6BF53 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1ABE6C67744EE88C958422CAF9C7A0C /* Pods-AudioRecorder.debug.xcconfig */;
+			baseConfigurationReference = 55723AABA3B3275CE490B72A70000107 /* Pods-AudioRecorder.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -2102,6 +2303,15 @@
 			buildConfigurations = (
 				082BB03E3E7E09A66148CB7675867EDA /* Debug */,
 				519DBE6AD5304503BCE7149D10AD5E25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9DEAEA92B6B2E14C06AABAB67B9D285 /* Build configuration list for PBXNativeTarget "Pods-AudioRecorderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B45C0F1FAE47D8B4A09DBDC818F7B8C /* Debug */,
+				4D0F240622C499E4EB31F77EDE0FF043 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

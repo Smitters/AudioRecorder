@@ -13,6 +13,7 @@ class RecordPlayer: NSObject {
 
     private var audioPlayer: AVAudioPlayer?
     private var timer: Timer?
+    var recordDirectory = Directories.recordsDirectory
 
     let isPlaying = BehaviorRelay(value: false)
     let playerProgress = BehaviorRelay<Float>(value: 0)
@@ -25,7 +26,7 @@ class RecordPlayer: NSObject {
         }
 
         backgroundQueue.async {
-            let url = Directories.recordsDirectory.appendingPathComponent(fileName)
+            let url = self.recordDirectory.appendingPathComponent(fileName)
             try? AVAudioSession.sharedInstance().setActive(true)
 
             self.audioPlayer = try? AVAudioPlayer(contentsOf: url)
