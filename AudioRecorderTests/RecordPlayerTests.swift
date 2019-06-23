@@ -21,6 +21,8 @@ class RecordPlayerTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
+        try? FileManager.default.createDirectory(atPath: Bundle(for: type(of: self)).bundleURL.absoluteString, withIntermediateDirectories: true)
+
         disposeBag = DisposeBag()
         player = RecordPlayer()
         player.recordDirectory = Bundle(for: type(of: self)).bundleURL

@@ -11,6 +11,8 @@ import AVFoundation
 class AssetTrimmer {
     private let originalAsset: AVAsset
 
+    var recordsDirectory = Directories.recordsDirectory
+
     init(fullRecord: URL) {
         originalAsset = AVAsset(url: fullRecord)
     }
@@ -37,13 +39,13 @@ class AssetTrimmer {
         }
 
         do {
-            try FileManager.default.createDirectory(at: Directories.recordsDirectory, withIntermediateDirectories: true)
+            try FileManager.default.createDirectory(at: recordsDirectory, withIntermediateDirectories: true)
         } catch {
             completion(.failed(Error.exportFailed(error)))
         }
 
         let safeName = safeFileName(from: outputFileName)
-        let outputURL = Directories.recordsDirectory.appendingPathComponent(safeName).appendingPathExtension("m4a")
+        let outputURL = recordsDirectory.appendingPathComponent(safeName).appendingPathExtension("m4a")
 
         exporter.outputURL = outputURL
         exporter.outputFileType = AVFileType.m4a
