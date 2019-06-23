@@ -72,6 +72,8 @@
 		10C08ED422BF8CEE0044ACBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10C08EDA22BF8D230044ACBB /* AssetTrimmerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTrimmerTests.swift; sourceTree = "<group>"; };
 		10C08EDC22BF8EDE0044ACBB /* sample_44100hz_16s.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_44100hz_16s.m4a; sourceTree = "<group>"; };
+		10C08EE022BFA68E0044ACBB /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		10C08EE222BFA7930044ACBB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		10E19B6E22BDB27A000117BD /* AssetTrimmer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetTrimmer.swift; sourceTree = "<group>"; };
 		10E19B7022BDF68D000117BD /* AudioRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecord.swift; sourceTree = "<group>"; };
 		10E19B7522BE191D000117BD /* RecordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsTableViewCell.swift; sourceTree = "<group>"; };
@@ -113,6 +115,8 @@
 				1066DAF122BBC45F00CB0FA2 /* Products */,
 				2E1F02B67E475FFF886E94A0 /* Pods */,
 				18E8ACDE346478AFB151CF56 /* Frameworks */,
+				10C08EE222BFA7930044ACBB /* README.md */,
+				10C08EE022BFA68E0044ACBB /* .travis.yml */,
 			);
 			sourceTree = "<group>";
 		};
