@@ -8,11 +8,7 @@
 Simple audio recorder with sound visualization.
 Used RxSwift and MVVM architecture pattern.
 
-## Structure:
-
-## Installation
-
-## TODO list:
+![GIF](https://github.com/Smitters/AudioRecorder/blob/master/sample.gif)
 
 ## Help, feedback or suggestions?
 
