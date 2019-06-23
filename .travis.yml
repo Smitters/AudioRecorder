@@ -2,7 +2,7 @@ osx_image: xcode10.2
 language: swift
 
 script:
-- xcodebuild -scheme AudioRecorder -workspace AudioRecorder.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.2'  build test
+- xcodebuild -scheme AudioRecorder -workspace AudioRecorder.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8'  build test
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+- bash <(curl -s https://codecov.io/bash) -t 20a4b5e5-afae-477e-b7ac-177a527ca76a
