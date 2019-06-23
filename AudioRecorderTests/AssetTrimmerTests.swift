@@ -21,6 +21,8 @@ class AssetTrimmerTests: XCTestCase {
         let path = Bundle(for: type(of: self)).path(forResource: "sample_44100hz_16s", ofType: "m4a") ?? ""
         let sampleUrl = URL(fileURLWithPath: path)
         trimmer = AssetTrimmer(fullRecord: sampleUrl)
+
+        try? FileManager.default.removeItem(at: Directories.recordsDirectory)
     }
 
     override func tearDown() {
