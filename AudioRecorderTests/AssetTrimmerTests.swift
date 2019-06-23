@@ -21,8 +21,6 @@ class AssetTrimmerTests: XCTestCase {
         let path = Bundle(for: type(of: self)).path(forResource: "sample_44100hz_16s", ofType: "m4a") ?? ""
         let sampleUrl = URL(fileURLWithPath: path)
         trimmer = AssetTrimmer(fullRecord: sampleUrl)
-
-        try? FileManager.default.removeItem(at: Directories.recordsDirectory)
     }
 
     override func tearDown() {
@@ -97,12 +95,12 @@ class AssetTrimmerTests: XCTestCase {
 
                 XCTAssertEqual(safeFileName, "output_File_Name.m4a")
                 XCTAssertEqual(trimmedAssetDuration, 7.915555555555556)
-            default:
-                XCTFail("Failed to trimm asset")
+            case .failed(let error):
+                XCTFail("Failed to trimm asset with error \(error.localizedDescription)")
             }
             trimExpectation.fulfill()
         }
 
-        waitForExpectations(timeout: 5, handler: nil)
+        waitForExpectations(timeout: 60, handler: nil)
     }
 }

@@ -44,7 +44,7 @@ class RecordPlayerTests: XCTestCase {
 
         player.play(fileName: fileName)
 
-        waitForExpectations(timeout: 5, handler: nil)
+        waitForExpectations(timeout: 60, handler: nil)
 
         XCTAssertTrue(player.isPlaying.value)
 
@@ -58,6 +58,6 @@ class RecordPlayerTests: XCTestCase {
 
         player.stop()
 
-        waitForExpectations(timeout: 5, handler: nil)
+        waitForExpectations(timeout: 60, handler: nil)
     }
 }
