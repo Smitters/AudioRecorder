@@ -52,8 +52,7 @@ class Coordinator {
 
     func showDetails(for record: AudioRecord) {
         let detailsController = Storyboards.RecordDetails.recordDetailsViewController()
-        let viewModel = RecordDetailsViewModel(record: record)
-
+        let viewModel = RecordDetailsViewModel(record: record, persistence: persistence, coordinator: self)
         detailsController.viewModel = viewModel
 
         navigationController?.pushViewController(detailsController, animated: true)
@@ -61,6 +60,10 @@ class Coordinator {
 
     func dismiss() {
         navigationController?.topViewController?.dismiss(animated: true)
+    }
+
+    func goBack() {
+        navigationController?.popViewController(animated: true)
     }
 
     func showError(_ error: Error, completion: (() -> Void)?) {

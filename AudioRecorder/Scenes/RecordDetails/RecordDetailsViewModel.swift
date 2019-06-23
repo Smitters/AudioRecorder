@@ -16,6 +16,8 @@ class RecordDetailsViewModel {
     private let url: URL
     private let record: AudioRecord
     private let recordPlayer = RecordPlayer()
+    private let persistence: Persistence
+    private let coordinator: Coordinator
 
     let wavePoints = BehaviorRelay<[CGFloat]>(value: [])
     let playerProgress: BehaviorRelay<Float>
@@ -23,8 +25,11 @@ class RecordDetailsViewModel {
     let isPlaying: BehaviorRelay<Bool>
     let name: String
 
-    init(record: AudioRecord) {
+    init(record: AudioRecord, persistence: Persistence, coordinator: Coordinator) {
         self.record = record
+        self.persistence = persistence
+        self.coordinator = coordinator
+
         url = Directories.recordsDirectory.appendingPathComponent(record.fileName)
         playerProgress = recordPlayer.playerProgress
         isPlaying = recordPlayer.isPlaying
@@ -42,6 +47,17 @@ class RecordDetailsViewModel {
         } else {
             recordPlayer.play(fileName: record.fileName)
         }
+    }
+
+    func delete() {
+        if isPlaying.value {
+            recordPlayer.stop()
+        }
+
+        persistence.viewContext.delete(record)
+        persistence.saveChanges()
+
+        coordinator.goBack()
     }
 
     func createWavePoints() {

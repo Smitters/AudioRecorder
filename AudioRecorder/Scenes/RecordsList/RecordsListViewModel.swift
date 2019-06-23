@@ -19,7 +19,7 @@ class RecordsListViewModel {
     let playedItemProgress: BehaviorRelay<Float>
     let isPlaying: BehaviorRelay<Bool>
 
-    var lastPlayedRow: Int?
+    var currentlyPlayedRow: Int?
 
     init(model: RecordsListModel, cordinator: Coordinator) {
         self.model = model
@@ -34,11 +34,11 @@ class RecordsListViewModel {
     }
 
     func playItem(at row: Int) {
-        if row == lastPlayedRow && isPlaying.value == true {
+        if row == currentlyPlayedRow && isPlaying.value == true {
             recordPlayer.stop()
-            lastPlayedRow = nil
+            currentlyPlayedRow = nil
         } else {
-            lastPlayedRow = row
+            currentlyPlayedRow = row
             let fileName = records.value[row].fileName
             recordPlayer.play(fileName: fileName)
         }
@@ -46,20 +46,20 @@ class RecordsListViewModel {
 
     func selectItem(at row: Int) {
         recordPlayer.stop()
-        lastPlayedRow = nil
+        currentlyPlayedRow = nil
         cordinator.showDetails(for: records.value[row])
     }
 
     func deleteItem(at row: Int) {
-        if row == lastPlayedRow && isPlaying.value == true {
+        if row == currentlyPlayedRow && isPlaying.value == true {
             recordPlayer.stop()
-            lastPlayedRow = nil
+            currentlyPlayedRow = nil
         }
 
         model.deleteItem(at: row)
 
-        if let lastPlayedRow = lastPlayedRow, row < lastPlayedRow {
-            self.lastPlayedRow = lastPlayedRow - 1
+        if let playedRow = currentlyPlayedRow, row < playedRow {
+            self.currentlyPlayedRow = playedRow - 1
         }
     }
 }

@@ -117,5 +117,14 @@ extension Recorder {
     enum Error: LocalizedError {
         case failedToEncodeAudio
         case permissionDenied
+
+        var errorDescription: String? {
+            switch self {
+            case .failedToEncodeAudio:
+                return NSLocalizedString("Failed to encode audio", comment: "")
+            case .permissionDenied:
+                return NSLocalizedString("Permission denied. Please, allow access to micro in settings", comment: "")
+            }
+        }
     }
 }

@@ -82,5 +82,20 @@ extension AssetTrimmer {
         case exportFailed(Swift.Error?)
         case failedToInstantiateExporter
         case canceled
+
+        var errorDescription: String? {
+            switch self {
+            case .canceled:
+                return NSLocalizedString("The export session was cancelled", comment: "")
+            case .failedToInstantiateExporter:
+                return NSLocalizedString("Failed to instantiate AVAssetExportSession", comment: "")
+            case .exportFailed(let error):
+                if let error = error {
+                    return error.localizedDescription
+                } else {
+                    return NSLocalizedString("Failed to export asset", comment: "")
+                }
+            }
+        }
     }
 }

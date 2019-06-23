@@ -12,10 +12,11 @@ import RxSwift
 
 class RecordDetailsViewController: UIViewController {
 
-    @IBOutlet weak var waveView: WaveView!
-    @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var fileNameLabel: UILabel!
-    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet private weak var waveView: WaveView!
+    @IBOutlet private weak var playButton: UIButton!
+    @IBOutlet private weak var fileNameLabel: UILabel!
+    @IBOutlet private weak var durationLabel: UILabel!
+    @IBOutlet private weak var deleteButton: UIBarButtonItem!
 
     let disposeBag = DisposeBag()
 
@@ -48,6 +49,10 @@ class RecordDetailsViewController: UIViewController {
 
         playButton.rx.tap.throttle(.milliseconds(350), scheduler: MainScheduler.instance).bind { [weak viewModel] in
             viewModel?.toggleStart()
+        }.disposed(by: disposeBag)
+
+        deleteButton.rx.tap.bind { [weak viewModel] in
+            viewModel?.delete()
         }.disposed(by: disposeBag)
 
         viewModel.isPlaying.asDriver().drive(onNext: { [weak self] isPlaying in

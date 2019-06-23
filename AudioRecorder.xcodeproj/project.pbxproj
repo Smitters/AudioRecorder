@@ -105,11 +105,9 @@
 			children = (
 				1066DAF322BBC45F00CB0FA2 /* AppDelegate.swift */,
 				1066DB1622BBD68000CB0FA2 /* Coordinator.swift */,
-				10EB3D0222BCE1150082092A /* Recorder.swift */,
-				10E19B6E22BDB27A000117BD /* AssetTrimmer.swift */,
-				10E19B7722BE66D0000117BD /* RecordPlayer.swift */,
 				10E19B7922BE9D63000117BD /* Directories.swift */,
 				109FC21122BF3226003C5C47 /* TimeIntervalExtensions.swift */,
+				109FC21322BF3ECB003C5C47 /* Utils */,
 				1066DB1F22BBF4D600CB0FA2 /* Scenes */,
 				1066DB0A22BBCA2600CB0FA2 /* Persistence */,
 				1066DAFF22BBC46000CB0FA2 /* LaunchScreen.storyboard */,
@@ -161,6 +159,16 @@
 				1066DB2222BC019800CB0FA2 /* Storyboards.swift */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		109FC21322BF3ECB003C5C47 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				10EB3D0222BCE1150082092A /* Recorder.swift */,
+				10E19B6E22BDB27A000117BD /* AssetTrimmer.swift */,
+				10E19B7722BE66D0000117BD /* RecordPlayer.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		10E19B7B22BEB03A000117BD /* RecordDetails */ = {

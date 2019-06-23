@@ -28,6 +28,7 @@ class RecordsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupUI()
         setupBindings()
     }
 
@@ -42,7 +43,7 @@ class RecordsListViewController: UIViewController {
                 cell.recordNameLabel.text = element.name
                 cell.durationLabel.text = "\(Int(element.duration.rounded(.up))) sec"
 
-                if row == viewModel.lastPlayedRow && viewModel.isPlaying.value {
+                if row == viewModel.currentlyPlayedRow && viewModel.isPlaying.value {
                     cell.playButton.setImage(UIImage(imageLiteralResourceName: "stop"), for: .normal)
                     cell.progressView.progress = viewModel.playedItemProgress.value
                 } else {
@@ -65,7 +66,7 @@ class RecordsListViewController: UIViewController {
         }).disposed(by: disposeBag)
 
         viewModel.playedItemProgress.asDriver().drive(onNext: { [weak self] progress in
-            guard let self = self, let row = self.viewModel?.lastPlayedRow,
+            guard let self = self, let row = self.viewModel?.currentlyPlayedRow,
                   let cell = self.tableView.cellForRow(at: IndexPath(row: row, section: 0)) as? RecordsTableViewCell else {
                     return
             }
@@ -80,5 +81,9 @@ class RecordsListViewController: UIViewController {
         addButton.rx.tap.bind { [weak viewModel] in
             viewModel?.addNewRecord()
         }.disposed(by: disposeBag)
+    }
+
+    private func setupUI() {
+        tableView.tableFooterView = UIView()
     }
 }

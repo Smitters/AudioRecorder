@@ -51,10 +51,10 @@ class WaveView: UIView {
             playedBottomWavePath.move(to: nextPoint)
 
             playedTopWavePath.addLine(to: CGPoint(x: playedTopWavePath.currentPoint.x,
-                                            y: playedTopWavePath.currentPoint.y - point * rect.height - 1))
+                                                  y: playedTopWavePath.currentPoint.y - point * rect.height - 1))
 
             playedBottomWavePath.addLine(to: CGPoint(x: playedBottomWavePath.currentPoint.x,
-                                               y: playedBottomWavePath.currentPoint.y + point * 0.75 * rect.height + 1))
+                                                     y: playedBottomWavePath.currentPoint.y + point * 0.75 * rect.height + 1))
             playedTopWavePath.close()
             playedBottomWavePath.close()
         }
